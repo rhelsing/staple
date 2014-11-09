@@ -32,17 +32,17 @@ section.row
 
 ##Modify Overall, Modular Style With Commands
 ```console
-rails generate style:set theme:Flat
+rails generate staple:set theme:Flat
 ```
 
 ```console
-rails generate style:set typeface_primary:HelveticaNeau
+rails generate staple:set typeface_primary:HelveticaNeau
 ```
 
 ```console
-rails generate style:set typeface_secondary:ComicSans
+rails generate staple:set typeface_secondary:ComicSans
 ```
 
 ```console
-rails generate style:set colorscheme:Flatland
+rails generate staple:set colorscheme:Flatland
 ```
