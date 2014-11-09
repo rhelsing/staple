@@ -46,3 +46,6 @@ staple typeface_secondary:ComicSans
 ```console
 staple color_scheme:Flatland
 ```
+
+gem build staple.gemspec
+gem push staple-0.0.1.gem

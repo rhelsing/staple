@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "staple"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2"
   spec.summary       = "a high level ui generator (COMING SOON)"
   spec.description   = "Does not work yet. Coming Soon. Built on top of foundation. In the spirit of thoughtbot/refills"
   spec.authors       = ["Ryan Helsing"]
