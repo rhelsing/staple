@@ -1,6 +1,6 @@
 require 'rails/generators'
 
-module Refills
+module Staple
   class ImportGenerator < Rails::Generators::Base
     desc 'Copy refills'
     source_root File.expand_path("../../../source", __FILE__)
