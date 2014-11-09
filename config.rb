@@ -1,24 +1,24 @@
-require 'erubis'
-require 'lib/snippet_helpers'
 
-activate :directory_indexes
+# require 'lib/snippet_helpers'
 
-set :css_dir, 'stylesheets'
-set :images_dir, 'images'
-set :js_dir, 'javascripts'
+# activate :directory_indexes
 
-helpers SnippetHelpers
+# set :css_dir, 'stylesheets'
+# set :images_dir, 'images'
+# set :js_dir, 'javascripts'
 
-ready do
-  sprockets.append_path 'vendor/stylesheets'
-  sprockets.append_path 'vendor/javascripts'
-end
+# helpers SnippetHelpers
 
-configure :development do
-  activate :livereload
-end
+# ready do
+#   sprockets.append_path 'vendor/stylesheets'
+#   sprockets.append_path 'vendor/javascripts'
+# end
 
-configure :build do
-  activate :relative_assets
-  set :relative_links, true
-end
+# configure :development do
+#   activate :livereload
+# end
+
+# configure :build do
+#   activate :relative_assets
+#   set :relative_links, true
+# end

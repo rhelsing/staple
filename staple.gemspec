@@ -1,15 +1,14 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'staple/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "staple"
-  spec.version       = Staple::VERSION
+  spec.version       = "0.0.1"
+  spec.summary       = "a high level ui generator (COMING SOON)"
+  spec.description   = "Does not work yet. Coming Soon. Built on top of foundation. In the spirit of thoughtbot/refills"
   spec.authors       = ["Ryan Helsing"]
   spec.email         = ["ryan.helsing@centerian.com"]
-  spec.description   = %q{Staple}
-  spec.summary       = %q{Staple}
   spec.homepage      = "https://github.com/rhelsing/staple"
   spec.license       = "MIT"
 
