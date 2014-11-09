@@ -1,4 +1,4 @@
-#Staple - DOES NOT WORK YET
+#Staple - COMING SOON
 
 CSS platform in the spirit of thoughtbot/refills. Built on top of foundation.
 
