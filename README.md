@@ -5,8 +5,10 @@ High level UI framework. Built on top of foundation.
 ##Install
 ```ruby
 #Gemfile
-gem 'font-awesome-rails'
+gem 'slim-rails'
 gem 'foundation-rails'
+gem 'font-awesome-rails'
+gem 'simple_form'
 gem 'staple'
 ```
 
@@ -53,9 +55,6 @@ gem push staple-0.0.1.gem
 
 #TODO
 
-* fix foundation-rails require, inlcude install in staple install?
 * declaring as dependency does not load it?
-* set scaffold to use slim? simple_form?
-* stop spring
 * make scaffold/generator use simple form/slim. not generate css
 * make install compatible with existing projects

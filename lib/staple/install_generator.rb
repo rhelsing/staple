@@ -6,16 +6,8 @@ module Staple
     source_root File.join(File.dirname(__FILE__), '..', '..')
     def foundation_install
       generate "foundation:install", "--slim" #rails g foundation:install --slim
-      # insert_into_file "app/assets/javascripts/application#{detect_js_format[0]}", "#{detect_js_format[1]} require foundation\n", :after => "jquery_ujs\n"
-      # append_to_file "app/assets/javascripts/application#{detect_js_format[0]}", "#{detect_js_format[2]}"
-      # # NOT NEEDED:
-      # # settings_file = File.join(File.dirname(__FILE__),"..", "..", "..", "..", "vendor", "assets", "stylesheets", "foundation", "_settings.scss")
-      # # create_file "app/assets/stylesheets/foundation_and_overrides.scss", File.read(settings_file)
-      # # append_to_file "app/assets/stylesheets/foundation_and_overrides.scss", "\n@import 'foundation';\n"
+      # trim fat
       copy_file "source/foundation/foundation_and_overrides.scss", "app/assets/stylesheets/foundation_and_overrides.scss", :force => true
-      # insert_into_file "app/assets/stylesheets/application#{detect_css_format[0]}", "\n#{detect_css_format[1]} require foundation_and_overrides\n", :after => "require_self"
-      # template 'source/foundation/application.html.slim', "app/views/layouts/application.html.slim"
-      # remove_file 'app/views/layouts/application.html.erb'
     end
 
     def simple_form_install
@@ -37,6 +29,21 @@ module Staple
     def modify_simple_form
       gsub_file "config/initializers/simple_form_foundation.rb", "b.use :error, wrap_with: { tag: :small }", "b.use :error, :wrap_with => { :tag => :small, :class => :error }"
       gsub_file "config/initializers/simple_form_foundation.rb", "# b.use :hint,  wrap_with: { tag: :span, class: :hint }", "b.use :hint,  wrap_with: { tag: :small, class: :error }"
+    end
+
+    def simple_form_template
+      copy_file "source/simple_form/_form.html.slim", "lib/templates/slim/scaffold/_form.html.slim"
+    end
+
+    def custom_scaffold
+      inject_into_file 'config/application.rb', after: "class Application < Rails::Application\n" do <<-'RUBY'
+          config.generators do |g|
+            g.template_engine :slim
+            g.stylesheets     false
+            g.javascripts     false
+          end
+        RUBY
+      end
     end
 
     #import base style
