@@ -5,14 +5,12 @@ CSS platform in the spirit of thoughtbot/refills. Built on top of foundation.
 ##Install
 ```ruby
 #Gemfile
-gem 'staple'
+gem 'foundation-rails'
+gem 'staple', :git => 'git://github.com/rhelsing/staple.git'
+
+```command
 bundle install
-```
-
-or
-
-```ruby
-gem install 'staple'
+rails g staple:install
 ```
 
 ##Simple, Universal Markup
@@ -49,3 +47,7 @@ staple color_scheme:Flatland
 
 gem build staple.gemspec
 gem push staple-0.0.1.gem
+
+#TODO
+
+* fix foundation-rails require

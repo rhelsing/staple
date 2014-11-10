@@ -17,8 +17,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency 'foundation-rails'
+  spec.add_runtime_dependency 'font-awesome-rails'
   spec.add_runtime_dependency 'simple_form'
   spec.add_runtime_dependency 'slim-rails'
-  spec.add_runtime_dependency 'font-awesome-rails'
+  spec.add_runtime_dependency 'foundation-rails'
 end
