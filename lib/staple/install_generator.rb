@@ -3,7 +3,7 @@ require 'rails/generators'
 module Staple
   class InstallGenerator < Rails::Generators::Base
     desc 'Install foundation w/ slim template, simple form and staple base styles'
-    source_root File.join(File.dirname(__FILE__), '..', '..', '..')
+    source_root File.join(File.dirname(__FILE__), '..', '..')
     def foundation_install
       generate "foundation:install", "--slim" #rails g foundation:install --slim
     end
