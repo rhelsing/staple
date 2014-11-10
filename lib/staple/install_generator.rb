@@ -5,7 +5,17 @@ module Staple
     desc 'Install foundation w/ slim template, simple form and staple base styles'
     source_root File.join(File.dirname(__FILE__), '..', '..')
     def foundation_install
-      generate "foundation:install", "--slim" #rails g foundation:install --slim
+      # generate "foundation:install", "--slim" #rails g foundation:install --slim
+      insert_into_file "app/assets/javascripts/application#{detect_js_format[0]}", "#{detect_js_format[1]} require foundation\n", :after => "jquery_ujs\n"
+      append_to_file "app/assets/javascripts/application#{detect_js_format[0]}", "#{detect_js_format[2]}"
+      # NOT NEEDED:
+      # settings_file = File.join(File.dirname(__FILE__),"..", "..", "..", "..", "vendor", "assets", "stylesheets", "foundation", "_settings.scss")
+      # create_file "app/assets/stylesheets/foundation_and_overrides.scss", File.read(settings_file)
+      # append_to_file "app/assets/stylesheets/foundation_and_overrides.scss", "\n@import 'foundation';\n"
+      copy_file "source/foundation/foundation_and_overrides.scss", "app/assets/stylesheets/foundation_and_overrides.scss", :force => true
+      insert_into_file "app/assets/stylesheets/application#{detect_css_format[0]}", "\n#{detect_css_format[1]} require foundation_and_overrides\n", :after => "require_self"
+      template 'source/foundation/application.html.slim', "app/views/layouts/application.html.slim"
+      remove_file 'app/views/layouts/application.html.erb'
     end
 
     def simple_form_install
@@ -41,6 +51,12 @@ module Staple
       return ['.sass', ' //='] if File.exist?('app/assets/stylesheets/application.sass')
       return ['.css.scss', ' //='] if File.exist?('app/assets/stylesheets/application.css.scss')
       return ['.scss', ' //='] if File.exist?('app/assets/stylesheets/application.scss')
+    end
+
+    def detect_js_format
+      return ['.coffee', '#=', "\n() ->\n  $(document).foundation()\n"] if File.exist?('app/assets/javascripts/application.coffee')
+      return ['.js.coffee', '#=', "\n() ->\n  $(document).foundation()\n"] if File.exist?('app/assets/javascripts/application.js.coffee')
+      return ['.js', '//=', "\n$(function(){ $(document).foundation(); });\n"] if File.exist?('app/assets/javascripts/application.js')
     end
 
   end
