@@ -20,6 +20,10 @@ module Staple
       insert_into_file "app/assets/stylesheets/application#{detect_css_format[0]}", "\n#{detect_css_format[1]} require font-awesome", :after => "require foundation_and_overrides"
     end
 
+    def require_simple_form
+      prepend_to_file "config/initializers/simple_form.rb", "require 'simple_form'"
+    end
+
     def modify_simple_form
       gsub_file "config/initializers/simple_form_foundation.rb", "b.use :error, wrap_with: { tag: :small }", "b.use :error, :wrap_with => { :tag => :small, :class => :error }"
       gsub_file "config/initializers/simple_form_foundation.rb", "# b.use :hint,  wrap_with: { tag: :span, class: :hint }", "b.use :hint,  wrap_with: { tag: :small, class: :error }"

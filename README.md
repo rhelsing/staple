@@ -14,6 +14,8 @@ bundle install
 rails g staple:install
 ```
 
+If generator hangs, call spring stop then try again
+
 ##Simple, Universal Markup
 ```slim
 section.row
@@ -51,4 +53,6 @@ gem push staple-0.0.1.gem
 
 #TODO
 
-* fix foundation-rails require
+* fix foundation-rails require, inlcude install in staple install?
+* set scaffold to use slim? simple_form?
+* stop spring
