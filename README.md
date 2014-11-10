@@ -7,6 +7,7 @@ CSS platform in the spirit of thoughtbot/refills. Built on top of foundation.
 #Gemfile
 gem 'foundation-rails'
 gem 'staple', :git => 'git://github.com/rhelsing/staple.git'
+```
 
 ```command
 bundle install
