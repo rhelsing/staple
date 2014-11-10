@@ -47,6 +47,7 @@ module Staple
     end
 
     #import base style
+    # append overrides
 
     def detect_css_format
       return ['.css', ' *='] if File.exist?('app/assets/stylesheets/application.css')

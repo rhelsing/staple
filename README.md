@@ -50,12 +50,13 @@ staple typeface_secondary:ComicSans
 staple color_scheme:Flatland
 ```
 
+##Build
+
 gem build staple.gemspec
 gem push staple-0.0.1.gem
 
-#TODO
+##TODO
 
-* Place intitial files
-* Clean up refills
+* add overrides to foundation file using big list, seperate into files
 * declaring as dependency does not load it?
-* make install compatible with existing projects
+* integration with existing projects
