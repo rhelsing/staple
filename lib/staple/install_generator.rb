@@ -31,6 +31,10 @@ module Staple
       gsub_file "config/initializers/simple_form_foundation.rb", "# b.use :hint,  wrap_with: { tag: :span, class: :hint }", "b.use :hint,  wrap_with: { tag: :small, class: :error }"
     end
 
+    def simple_form_template
+      copy_file "source/simple_form/_form.html.slim", "lib/templates/slim/scaffold/_form.html.slim", :force => true
+    end
+
     def custom_scaffold
       inject_into_file 'config/application.rb', after: "class Application < Rails::Application\n" do <<-'RUBY'
           config.generators do |g|

@@ -1,0 +1,7 @@
+= simple_form_for(@<%= singular_table_name %>, :html => {'data-abide' => ''}) do |f|
+  .form-inputs
+<%- attributes.each do |attribute| -%>
+    = f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %>, input_html: { required: ''}, hint: 'Cannot be blank.'
+<%- end -%>
+  .form-actions
+    = f.button :submit
