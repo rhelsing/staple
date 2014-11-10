@@ -12,10 +12,10 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/rhelsing/staple"
   spec.license       = "MIT"
 
-  spec.add_runtime_dependency 'font-awesome-rails', '~> 4.2', '>= 4.2.0.0'
-  spec.add_runtime_dependency 'foundation-rails', '~> 5.4', '>= 5.4.5.0'
-  spec.add_runtime_dependency 'simple_form', '~> 3.0', '>= 3.0.2'
-  spec.add_runtime_dependency 'slim-rails', '~> 2.1', '>= 2.1.0'
+  # spec.add_runtime_dependency 'font-awesome-rails', '~> 4.2', '>= 4.2.0.0'
+  # spec.add_runtime_dependency 'foundation-rails', '~> 5.4', '>= 5.4.5.0'
+  # spec.add_runtime_dependency 'simple_form', '~> 3.0', '>= 3.0.2'
+  # spec.add_runtime_dependency 'slim-rails', '~> 2.1', '>= 2.1.0'
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }

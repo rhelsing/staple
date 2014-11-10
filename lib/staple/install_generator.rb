@@ -39,10 +39,6 @@ module Staple
       gsub_file "config/initializers/simple_form_foundation.rb", "# b.use :hint,  wrap_with: { tag: :span, class: :hint }", "b.use :hint,  wrap_with: { tag: :small, class: :error }"
     end
 
-    def simplify_foundation_and_overrides
-      copy_file "source/foundation_and_overrides.scss", "app/assets/stylesheets/foundation_and_overrides.scss", :force => true
-    end
-
     #import base style
 
     def detect_css_format

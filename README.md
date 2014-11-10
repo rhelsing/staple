@@ -53,5 +53,8 @@ gem push staple-0.0.1.gem
 #TODO
 
 * fix foundation-rails require, inlcude install in staple install?
+* declaring as dependency does not load it?
 * set scaffold to use slim? simple_form?
 * stop spring
+* make scaffold/generator use simple form/slim. not generate css
+* make install compatible with existing projects
