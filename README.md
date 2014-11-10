@@ -55,6 +55,7 @@ gem push staple-0.0.1.gem
 
 #TODO
 
+* Place intitial files
+* Clean up refills
 * declaring as dependency does not load it?
-* make scaffold/generator use simple form/slim. not generate css
 * make install compatible with existing projects
