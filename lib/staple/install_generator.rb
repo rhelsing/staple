@@ -26,7 +26,7 @@ module Staple
     end
 
     def simplify_foundation_and_overrides
-      copy_file "source/foundation_and_overrides.scss" "app/assets/stylesheets/foundation_and_overrides.scss", :force => true
+      copy_file "source/foundation_and_overrides.scss", "app/assets/stylesheets/foundation_and_overrides.scss", :force => true
     end
 
     #import base style
