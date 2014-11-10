@@ -1,19 +1,20 @@
 #Staple - COMING SOON
 
-CSS platform in the spirit of thoughtbot/refills. Built on top of foundation.
+High level UI framework. Built on top of foundation.
 
 ##Install
 ```ruby
 #Gemfile
+gem 'font-awesome-rails'
+gem 'foundation-rails'
 gem 'staple'
 ```
 
 ```command
 bundle install
+spring stop
 rails g staple:install
 ```
-
-If generator hangs, call spring stop then try again
 
 ##Simple, Universal Markup
 ```slim

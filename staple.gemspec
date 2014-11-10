@@ -4,18 +4,23 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "staple"
-  spec.version       = "0.0.4"
+  spec.version       = "0.0.7"
   spec.summary       = "a high level ui generator (COMING SOON)"
-  spec.description   = "Does not work yet. Coming Soon. Built on top of foundation. In the spirit of thoughtbot/refills"
+  spec.description   = "Coming Soon. Built on top of foundation."
   spec.authors       = ["Ryan Helsing"]
   spec.email         = ["ryan.helsing@centerian.com"]
   spec.homepage      = "https://github.com/rhelsing/staple"
   spec.license       = "MIT"
 
-  # spec.add_runtime_dependency 'font-awesome-rails', '~> 4.2', '>= 4.2.0.0'
-  # spec.add_runtime_dependency 'foundation-rails', '~> 5.4', '>= 5.4.5.0'
-  # spec.add_runtime_dependency 'simple_form', '~> 3.0', '>= 3.0.2'
-  # spec.add_runtime_dependency 'slim-rails', '~> 2.1', '>= 2.1.0'
+  spec.add_dependency('foundation-rails', '>= 5.4')
+  spec.add_dependency('simple_form', '>= 3.0')
+  spec.add_dependency('font-awesome-rails', '>= 4.2')
+  spec.add_dependency('slim-rails', '>= 2.1')
+
+  spec.add_development_dependency('rake')
+  spec.add_development_dependency('rspec')
+  spec.add_development_dependency('rdoc')
+  spec.add_development_dependency('bundler')
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
