@@ -2,6 +2,12 @@
 
 High level UI framework. Built on top of foundation.
 
+##TODO
+
+* add overrides to foundation file using big list, seperate into files
+* declaring as dependency does not load it?
+* integration with existing projects
+
 ##Install
 ```ruby
 #Gemfile
@@ -54,9 +60,3 @@ staple color_scheme:Flatland
 
 gem build staple.gemspec
 gem push staple-0.0.1.gem
-
-##TODO
-
-* add overrides to foundation file using big list, seperate into files
-* declaring as dependency does not load it?
-* integration with existing projects

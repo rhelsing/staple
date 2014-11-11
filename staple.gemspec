@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name          = "staple"
   spec.version       = "0.1.0"
-  spec.summary       = "a high level ui generator (COMING SOON)"
+  spec.summary       = "A high level ui generator. WIP."
   spec.description   = "Coming Soon. Built on top of foundation."
   spec.authors       = ["Ryan Helsing"]
   spec.email         = ["ryan.helsing@centerian.com"]
@@ -17,10 +17,10 @@ Gem::Specification.new do |spec|
   spec.add_dependency('font-awesome-rails', '~> 4.2')
   spec.add_dependency('slim-rails', '~> 2.1')
 
-  spec.add_development_dependency('rake')
-  spec.add_development_dependency('rspec')
-  spec.add_development_dependency('rdoc')
-  spec.add_development_dependency('bundler')
+  # spec.add_development_dependency('rake')
+  # spec.add_development_dependency('rspec')
+  # spec.add_development_dependency('rdoc')
+  # spec.add_development_dependency('bundler')
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
