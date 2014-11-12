@@ -60,10 +60,10 @@ $rem-base: $scale-factor*16px;
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to rgba($black, $transparent-medium)-font-size and make sure rgba($black, $transparent-medium)-font-size is a px value.
-rgba($black, $transparent-medium)-font-size: $scale-factor*100%;
+$base-font-size: $scale-factor*100%;
 
 // The rgba($black, $transparent-medium)-font-size is 100% while rgba($black, $transparent-medium)-line-height is 150%
-rgba($black, $transparent-medium)-line-height: $scale-factor*150%;
+$base-line-height: $scale-factor*150%;
 
 // We use this to control whether or not CSS classes come through in the gem files.
 // $include-html-classes: true;
@@ -419,7 +419,7 @@ $button-round: $global-rounded;
 
 // We use this to set default opacity and cursor for disabled buttons.
 $button-disabled-opacity: 0.7;
-$button-disabled-cursor: $cursor-default-value;
+// $button-disabled-cursor: $cursor-default-value;
 
 // 06. Button Groups
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -589,7 +589,7 @@ $input-border-style: solid;
 $input-border-width: 1px;
 $input-border-radius: $global-radius;
 $input-disabled-bg: rgba($black, $transparent-weak);
-$input-disabled-cursor: $cursor-default-value;
+// $input-disabled-cursor: $cursor-default-value;
 $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 
 // We use these to style the fieldset border and spacing.
@@ -1114,39 +1114,39 @@ $side-nav-divider-color: scale-color($white, $lightness: 10%);
 
 // $include-html-button-classes: $include-html-classes;
 
-// We use these to control different shared styles for Split Buttons
-$split-button-function-factor: 10%;
-$split-button-pip-color: $white;
-$split-button-pip-color-alt: rgba($black, $transparent-strong);
-$split-button-active-bg-tint: rgba(0,0,0,0.1);
+// // We use these to control different shared styles for Split Buttons
+// $split-button-function-factor: 10%;
+// $split-button-pip-color: $white;
+// $split-button-pip-color-alt: rgba($black, $transparent-strong);
+// $split-button-active-bg-tint: rgba(0,0,0,0.1);
 
-// We use these to control tiny split buttons
-$split-button-padding-tny: $button-pip-tny * 10;
-$split-button-span-width-tny: $button-pip-tny * 6;
-$split-button-pip-size-tny: $button-pip-tny;
-$split-button-pip-top-tny: $button-pip-tny * 2;
-$split-button-pip-default-float-tny: rem-calc(-6);
+// // We use these to control tiny split buttons
+// $split-button-padding-tny: $button-pip-tny * 10;
+// $split-button-span-width-tny: $button-pip-tny * 6;
+// $split-button-pip-size-tny: $button-pip-tny;
+// $split-button-pip-top-tny: $button-pip-tny * 2;
+// $split-button-pip-default-float-tny: rem-calc(-6);
 
-// We use these to control small split buttons
-$split-button-padding-sml: $button-pip-sml * 10;
-$split-button-span-width-sml: $button-pip-sml * 6;
-$split-button-pip-size-sml: $button-pip-sml;
-$split-button-pip-top-sml: $button-pip-sml * 1.5;
-$split-button-pip-default-float-sml: rem-calc(-6);
+// // We use these to control small split buttons
+// $split-button-padding-sml: $button-pip-sml * 10;
+// $split-button-span-width-sml: $button-pip-sml * 6;
+// $split-button-pip-size-sml: $button-pip-sml;
+// $split-button-pip-top-sml: $button-pip-sml * 1.5;
+// $split-button-pip-default-float-sml: rem-calc(-6);
 
-// We use these to control medium split buttons
-$split-button-padding-med: $button-pip-med * 9;
-$split-button-span-width-med: $button-pip-med * 5.5;
-$split-button-pip-size-med: $button-pip-med - rem-calc(3);
-$split-button-pip-top-med: $button-pip-med * 1.5;
-$split-button-pip-default-float-med: rem-calc(-6);
+// // We use these to control medium split buttons
+// $split-button-padding-med: $button-pip-med * 9;
+// $split-button-span-width-med: $button-pip-med * 5.5;
+// $split-button-pip-size-med: $button-pip-med - rem-calc(3);
+// $split-button-pip-top-med: $button-pip-med * 1.5;
+// $split-button-pip-default-float-med: rem-calc(-6);
 
-// We use these to control large split buttons
-$split-button-padding-lrg: $button-pip-lrg * 8;
-$split-button-span-width-lrg: $button-pip-lrg * 5;
-$split-button-pip-size-lrg: $button-pip-lrg - rem-calc(6);
-$split-button-pip-top-lrg: $button-pip-lrg + rem-calc(5);
-$split-button-pip-default-float-lrg: rem-calc(-6);
+// // We use these to control large split buttons
+// $split-button-padding-lrg: $button-pip-lrg * 8;
+// $split-button-span-width-lrg: $button-pip-lrg * 5;
+// $split-button-pip-size-lrg: $button-pip-lrg - rem-calc(6);
+// $split-button-pip-top-lrg: $button-pip-lrg + rem-calc(5);
+// $split-button-pip-default-float-lrg: rem-calc(-6);
 
 // 28. Sub Nav
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1376,9 +1376,9 @@ $topbar-menu-icon-color-toggled: rgba($black, $transparent-medium);
 
 // Transitions and breakpoint styles
 $topbar-transition-speed: 300ms;
-Using rem-calc for the below breakpoint causes issues with top bar
+// Using rem-calc for the below breakpoint causes issues with top bar
 $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
-$topbar-media-query: $medium-up;
+// $topbar-media-query: $medium-up;
 
 // Divider Styles
 $topbar-divider-border-bottom: solid 1px  scale-color($topbar-bg-color, $lightness: 13%);

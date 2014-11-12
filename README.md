@@ -12,6 +12,7 @@ High level UI framework. Built on top of foundation.
 ##LOW PRIORITY
 * declaring as dependency does not load it?
 * integration with existing projects
+* turbolinks messed with abide validation
 
 ##Install
 
