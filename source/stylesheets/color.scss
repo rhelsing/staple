@@ -25,8 +25,8 @@ $transparent-strong:0.8;
 $transparent-medium:0.6;
 $transparent-weak:0.4;
 $transparent-light:0.2;
-$opacity-values:light weak medium strong;
-$opacity-define:$transparent-light $transparent-weak $transparent-medium $transparent-strong;
+$opacity-values:light 				weak 				medium 					strong;
+$opacity-define:$transparent-light 	$transparent-weak 	$transparent-medium 	$transparent-strong;
 
 //DIFFERENCE IN SHADE WHEN ACCENTING COMPONENTS
 $primary-difference: 30;

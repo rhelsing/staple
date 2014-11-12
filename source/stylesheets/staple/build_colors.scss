@@ -1,30 +1,45 @@
-//generators
 //BACKGROUNDS
-@each $color-id in $bg-colors {
-	$i: index($bg-colors, $color-id);
-	$color: nth($bg-colors-d, $i);
-
-	.#{$color-id}-bg{
+@each $class in $accent-classes {
+	$i: index($accent-classes, $class);
+	$color: nth($accent-define, $i);
+	.#{$class}-bg{
 		background-color: $color;
 	}
-}
-
-//TEXT
-@each $color-id in $text-colors {
-	$i: index($text-colors, $color-id);
-	$color: nth($text-colors-d, $i);
-
-	.#{$color-id}-text{
-		color: $color;
+	@each $value in $opacity-values {
+		$j: index($opacity-values, $value);
+		$opacity: nth($opacity-define, $j);
+		.#{$class}-bg-#{$value}{
+			background-color: rgba($color, $opacity);
+		}
 	}
 }
-
 //BORDERS
-@each $color-id in $border-colors {
-	$i: index($border-colors, $color-id);
-	$color: nth($border-colors-d, $i);
-
-	.#{$color-id}-border{
-		border:$border-size solid $color;
+@each $class in $accent-classes {
+	$i: index($accent-classes, $class);
+	$color: nth($accent-define, $i);
+	.#{$class}-border{
+		border: $border-size solid $color;
+	}
+	@each $value in $opacity-values {
+		$j: index($opacity-values, $value);
+		$opacity: nth($opacity-define, $j);
+		.#{$class}-border-#{$value}{
+			border: $border-size solid rgba($color, $opacity);
+		}
+	}
+}
+//TEXT
+@each $class in $accent-classes {
+	$i: index($accent-classes, $class);
+	$color: nth($accent-define, $i);
+	.#{$class}-text{
+		color: $color;
+	}
+	@each $value in $opacity-values {
+		$j: index($opacity-values, $value);
+		$opacity: nth($opacity-define, $j);
+		.#{$class}-text-#{$value}{
+			color: rgba($color, $opacity);
+		}
 	}
 }
