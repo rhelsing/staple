@@ -4,8 +4,6 @@ High level UI framework. Built on top of foundation.
 
 ##TODO
 
-* Finish color and buttons
-* Finish text and test
 * Simple default generators first. Basic Theme.
 * Load vars then override before
 * Generate override components after using vars

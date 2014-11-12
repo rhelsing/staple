@@ -48,14 +48,7 @@ module Staple
 
     #import base style
     def staple_install
-      copy_file "source/stylesheets/before.scss", "app/assets/stylesheets/before.scss"
-      copy_file "source/stylesheets/after.scss", "app/assets/stylesheets/after.scss"
-      copy_file "source/stylesheets/buttons.scss", "app/assets/stylesheets/buttons.scss"
-      copy_file "source/stylesheets/color.scss", "app/assets/stylesheets/color.scss"
-      copy_file "source/stylesheets/forms.scss", "app/assets/stylesheets/forms.scss"
-      copy_file "source/stylesheets/sizing.scss", "app/assets/stylesheets/sizing.scss"
-      copy_file "source/stylesheets/typography.scss", "app/assets/stylesheets/typography.scss"
-      copy_file "source/stylesheets/utilities.scss", "app/assets/stylesheets/utilities.scss"
+      directory "source/stylesheets/staple", "app/assets/stylesheets/staple"
     end
 
     def detect_css_format
