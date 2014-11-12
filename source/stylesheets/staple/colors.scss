@@ -4,7 +4,7 @@ $secondary-color: adjust_hue($primary-color, 135);
 $tertiary-color: adjust_hue($primary-color, 200);
 
 //AUTO GENERATE FOUNDATION COLORS: (CAN OVERRIDE)
-@import 'color_functions';
+@import 'helpers/color_functions';
 $alert-color: alert($primary-color);//red
 $success-color: success($primary-color);//green
 $warning-color: warning($primary-color);//yellow/orange

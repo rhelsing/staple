@@ -1,6 +1,6 @@
 @import "foundation/functions";
 $include-html-classes: true;
 $include-html-global-classes: $include-html-classes;
-@import 'staple/before';
+@import 'staple/init/before';
 @import 'foundation';
-@import 'staple/after';
+@import 'staple/init/after';

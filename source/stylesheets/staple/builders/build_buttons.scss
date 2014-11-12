@@ -1,4 +1,4 @@
-//load functions before calling them
+//load functions before calling them. put in helpers
 @function set-text-color($color) {
   @if (lightness($color) > 60%) {
     @return rgba($black, $transparent-weak); // Lighter backgorund, return dark color
@@ -10,6 +10,9 @@
 .button{
 	background-color: $primary-color;
 	color: set-text-color($primary-color);
+	font-weight: 200;
+ 	letter-spacing: 1px;
+ 	transition: background-color 150ms ease-out;
 }
 .button:hover{
 	background-color: lighten($primary-color, $transition-brighten);
