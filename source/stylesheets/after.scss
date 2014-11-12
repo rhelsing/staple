@@ -1,5 +1,6 @@
 //after.scss
 //Must load after foundation. Overrides some of foundations defaults. Generators
-@import 'buttons';
-@import 'forms';
+@import 'staple/build_colors'
+@import 'staple/buttons';
+@import 'staple/forms';
 //BUILD IT

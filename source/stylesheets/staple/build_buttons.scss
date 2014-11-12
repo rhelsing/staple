@@ -1,0 +1,32 @@
+//load functions before calling them
+@function set-text-color($color) {
+  @if (lightness($color) > 60%) {
+    @return rgba($black, $transparent-weak); // Lighter backgorund, return dark color
+  } @else {
+    @return rgba($white, $transparent-strong); // Darker background, return light color
+  }
+}
+//DEFAULT
+.button{
+	background-color: $primary-color;
+	color: set-text-color($primary-color);
+}
+.button:hover{
+	background-color: lighten($primary-color, $transition-brighten);
+}
+
+//BUTTON GENERATOR FOR EACH COLOR
+@each $color in $button-classes {
+	$i: index($button-classes, $color);
+	$temp-color: nth($button-define, $i);
+	.button.#{$color}{
+		background-color: $temp-color;
+		color: set-text-color($temp-color);
+	}
+	.button.#{$color}:hover{
+		background-color: lighten($temp-color, $transition-brighten);
+	}
+}
+
+//MODIFY DEFAULT STYLE
+//APPEND ADDITIONAL GENERATORS WITH COMMANDS AS NEEDED

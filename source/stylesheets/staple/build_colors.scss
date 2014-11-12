@@ -28,26 +28,3 @@
 		border:$border-size solid $color;
 	}
 }
-
-//TEMP
-nav.top-bar{
-	background: $primary-color;
-}
-nav.top-bar.transparent{
-	background: transparent;
-	li{
-		background: transparent;
-		a:not(.button){
-			background: transparent;
-		}
-		a:not(.button):hover{
-			background: rgba(255,255,255,0.3);
-		}
-	}
-}
-nav.top-bar.transparent li.active a:not(.button){
-	background: rgba(255,255,255,0.2);
-}
-nav.top-bar.transparent li.active a:not(.button):hover{
-	background: rgba(255,255,255,0.3);
-}

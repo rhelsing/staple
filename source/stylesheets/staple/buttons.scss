@@ -1,0 +1,60 @@
+// .button{
+// 	//permutations
+// 	font-weight: 200;
+// 	letter-spacing: 1px;
+
+// 	background-color: $primary-color;
+// 	border-color: $primary-color;
+// 	color: white;
+// 	transition: background-color 150ms ease-out;
+
+// 	padding-top: 0.9rem;
+// 	padding-right: 2.1rem;
+// 	padding-bottom: 0.96rem;
+// 	padding-left: 2.1rem;
+
+// 	margin-right: 0.5rem;//arbitrary
+// }
+// .button.tiny{
+// 	padding-top: 0.525rem;
+// 	padding-right: 1.35rem;
+// 	padding-bottom: 0.5875rem;
+// 	padding-left: 1.35rem;
+// }
+// .button.small{
+// 	padding-top: 0.775rem;
+// 	padding-right: 1.85rem;
+// 	padding-bottom: 0.8375rem;
+// 	padding-left: 1.85rem;
+// }
+// .button.large{
+// 	padding-top: 1.025rem;
+// 	padding-right: 2.55rem;
+// 	padding-bottom: 1.0875rem;
+// 	padding-left: 2.55rem;
+// }
+// //used for rounded buttons
+// .button.wider{
+// 	padding-right: 2.5rem;
+// 	padding-left: 2.5rem;
+// }
+// .button.shadow{
+// 	box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+// }
+// .button.text-shadow{
+// 	text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+// }
+// .button.inner-text-shadow{
+// 	text-shadow: 1px 1px 0px rgba(255,255,255,0.3);
+// }
+// .button.expand{
+// 	margin-right:0;
+// }
+// //FIX
+// .button-group{
+// 	.button{
+// 		margin-right:0px;
+// 	}
+// }
+
+@import 'build_buttons'
