@@ -4,10 +4,11 @@ High level UI framework. Built on top of foundation.
 
 ##TODO
 
-* add overrides to foundation file using big list, seperate into files
+* Load vars then override before
+* Generate override components after using vars
+* Modify files using generators or manual
 * declaring as dependency does not load it?
 * integration with existing projects
-* Split typography into sections
 
 ##Install
 
