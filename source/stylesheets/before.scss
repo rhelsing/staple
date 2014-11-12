@@ -1,9 +1,7 @@
 //before.scss
 //must be loaded before loading foundation because variables will affect foundation
-@import "foundation/functions";
-$include-html-classes: true;
-$include-html-global-classes: $include-html-classes;
+@import 'size';
+@import 'shape';
 @import 'color';
 @import 'typography';
-@import 'sizing';
-//additional based on variables
+@import 'staple/overrides'

@@ -1,0 +1,51 @@
+$primary-color: #3389dd;
+$complement-color: adjust_hue($primary-color, 180);
+$secondary-color: adjust_hue($primary-color, 135);
+$tertiary-color: adjust_hue($primary-color, 200);
+
+//AUTO GENERATE FOUNDATION COLORS: (CAN OVERRIDE)
+@import 'staple/color_functions';
+$alert-color: alert($primary-color);//red
+$success-color: success($primary-color);//green
+$warning-color: warning($primary-color);//yellow/orange
+$info-color: info($primary-color);//blue
+
+//BUTTON CLASSES TO GENERATE:
+$button-classes: 		primary 		compliment 			secondary 			tertiary;
+$button-define: 		$primary-color 	$complement-color	$secondary-color 	$tertiary-color;
+
+//ACCENTS CLASSES TO GENERATE: (BACKGROUNDS, BORDERS, AND TEXT)
+$white: #ffffff;
+$black: #000000;
+//COLORS:
+//rgba($black, $transparent-light);
+//rgba($black, $transparent-weak);
+// $white-smoke : #F5F5F5;
+// $silver      : #EFEFEF;
+// $smoke       : #EEEEEE;
+// $gainsboro   : #DDDDDD; *
+// $iron        : #CCCCCC;
+//rgba($black, $transparent-medium);
+// $base        : #AAAAAA;
+// $aluminum    : #999999;
+// $jumbo       : #888888;*
+// $monsoon     : #777777;*
+// $steel       : #666666;
+//rgba($black, $transparent-strong);
+// $charcoal    : #555555;*
+// $tuatara     : #444444;
+// $oil         : #333333; *
+// $jet         : #222222; *rgba($black, .2);
+$accent-classes: 	white 	black;
+$accent-define: 	$white 	$black;
+
+//OPACITY CLASSES TO GENERATE: (% OPACITY OF ACCENT CLASSES)
+$transparent-strong:0.8;
+$transparent-medium:0.6;
+$transparent-weak:0.4;
+$transparent-light:0.2;
+$opacity-values:light weak medium strong;
+$opacity-define:$transparent-light $transparent-weak $transparent-medium $transparent-strong;
+
+//DIFFERENCE IN SHADE WHEN ACCENTING COMPONENTS
+$primary-difference: 30;

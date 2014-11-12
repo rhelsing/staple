@@ -1,0 +1,63 @@
+//FUNCTIONS
+@function determine-color($color){
+	$high: red($color);
+	$r_color: 0;
+	@if (green($color) > $high){
+		$high: green($color);
+		$r_color: 1;
+	}
+	@if (blue($color) > $high){
+		$high: blue($color);
+		$r_color: 2;
+	}
+  @return $r_color;
+}
+
+@function alert($p-color){
+	//determine what primary color is closest to then alter
+	@if (determine-color($p-color) == 0){
+		@return adjust-hue($p-color, 0);
+	}
+	@if (determine-color($p-color) == 1){
+		@return adjust-hue($p-color, -135);
+	}
+	@if (determine-color($p-color) == 2){
+		@return adjust-hue($p-color, 150);
+	}
+}
+
+@function success($p-color){
+	@if (determine-color($p-color) == 0){
+		@return adjust-hue($p-color, 135);
+	}
+	@if (determine-color($p-color) == 1){
+		@return adjust-hue($p-color, 0);
+	}
+	@if (determine-color($p-color) == 2){
+		@return adjust-hue($p-color, -60);
+	}
+}
+
+@function warning($p-color){
+	@if (determine-color($p-color) == 0){
+		@return adjust-hue($p-color, 30);
+	}
+	@if (determine-color($p-color) == 1){
+		@return adjust-hue($p-color, 255);
+	}
+	@if (determine-color($p-color) == 2){
+		@return adjust-hue($p-color, 200);
+	}
+}
+
+@function info($p-color){
+	@if (determine-color($p-color) == 0){
+		@return adjust-hue($p-color, 200);
+	}
+	@if (determine-color($p-color) == 1){
+		@return adjust-hue($p-color, 60);
+	}
+	@if (determine-color($p-color) == 2){
+		@return adjust-hue($p-color, 0);
+	}
+}

@@ -7,8 +7,10 @@ High level UI framework. Built on top of foundation.
 * add overrides to foundation file using big list, seperate into files
 * declaring as dependency does not load it?
 * integration with existing projects
+* Split typography into sections
 
 ##Install
+
 ```ruby
 #Gemfile
 gem 'slim-rails'
