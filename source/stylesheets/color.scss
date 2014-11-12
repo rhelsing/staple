@@ -14,28 +14,9 @@ $info-color: info($primary-color);//blue
 $button-classes: 		primary 		compliment 			secondary 			tertiary;
 $button-define: 		$primary-color 	$complement-color	$secondary-color 	$tertiary-color;
 
-//ACCENTS CLASSES TO GENERATE: (BACKGROUNDS, BORDERS, AND TEXT)
+//ACCENTS CLASSES TO GENERATE: (BACKGROUNDS, BORDERS, AND TEXT-COLOR)
 $white: #ffffff;
 $black: #000000;
-//COLORS:
-//rgba($black, $transparent-light);
-//rgba($black, $transparent-weak);
-// $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
-// $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD; *
-// $iron        : #CCCCCC;
-//rgba($black, $transparent-medium);
-// $base        : #AAAAAA;
-// $aluminum    : #999999;
-// $jumbo       : #888888;*
-// $monsoon     : #777777;*
-// $steel       : #666666;
-//rgba($black, $transparent-strong);
-// $charcoal    : #555555;*
-// $tuatara     : #444444;
-// $oil         : #333333; *
-// $jet         : #222222; *rgba($black, .2);
 $accent-classes: 	white 	black;
 $accent-define: 	$white 	$black;
 
@@ -49,3 +30,6 @@ $opacity-define:$transparent-light $transparent-weak $transparent-medium $transp
 
 //DIFFERENCE IN SHADE WHEN ACCENTING COMPONENTS
 $primary-difference: 30;
+
+
+//GRADIENT BLUR AND IMAGES HERE??

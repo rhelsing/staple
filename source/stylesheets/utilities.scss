@@ -1,0 +1,42 @@
+//SAME AS BUTTONS FOR SHADOWS BORDERS ROUNDING
+//SPECIFY STYLES TO GENERATE THAT CAN BE APPLIED AND SET AS DEFAULTS
+
+//FOUNDATION STYLES: CAN BE OVERRIDDEN BUT NEEDED
+$global-radius: 5px;
+$global-rounded: 1000px;
+
+//FONT WEIGHT CLASSES TO GENERATE - UTILITIES?
+
+//LETTER SPACING CLASSES TO GENERATE - UTILITIES?
+
+//ADDITIONAL UTILITIES
+//need vertical alignment
+//font weights
+.fontweight-light{
+	font-weight: 200;
+}
+.fontweight-normal{
+	font-weight: 400;
+}
+.fontweight-medium{
+	font-weight: 500;
+}
+.fontweight-strong{
+	font-weight: 700;
+}
+.uppercase{
+	text-transform: uppercase;
+}
+// hack: needed for admin
+.row.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+.no-margin{
+	margin: 0px;
+}
+
+//* modifiers:padding, border, space between buttons
+//* gradient
+//* blur
+//* middle

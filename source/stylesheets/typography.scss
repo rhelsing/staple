@@ -1,0 +1,13 @@
+//IMPORT FONTS HERE
+$type-face-primary:"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$type-face-secondary:Georgia, Cambria, "Times New Roman", Times, serif;
+
+//FOUNDATION STYLES: CAN BE OVERRIDDEN BUT NEEDED
+$font-family-sans-serif: $type-face-primary;
+$font-family-serif: $type-face-secondary;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+
+//FONT CLASSES TO GENERATE
+
+//SET FONT

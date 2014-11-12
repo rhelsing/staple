@@ -4,9 +4,12 @@ High level UI framework. Built on top of foundation.
 
 ##TODO
 
+* Simple default generators first. Basic Theme.
 * Load vars then override before
 * Generate override components after using vars
 * Modify files using generators or manual
+
+##LOW PRIORITY
 * declaring as dependency does not load it?
 * integration with existing projects
 
@@ -44,19 +47,19 @@ section.row
 
 ##Modify Overall, Modular Style With Commands
 ```console
-staple theme:Flat
+staple theme:flat
 ```
 
 ```console
-staple typeface_primary:HelveticaNeau
+staple type-face-primary:HelveticaNeau
 ```
 
 ```console
-staple typeface_secondary:ComicSans
+staple type-face-secondary:ComicSans
 ```
 
 ```console
-staple color_scheme:Flatland
+staple color-scheme:Flatland
 ```
 
 ##Build

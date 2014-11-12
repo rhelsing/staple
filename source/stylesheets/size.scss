@@ -1,10 +1,18 @@
 //SCALE
-$scale-factor: 1;//Will adjust just about everything
+$scale-factor: 1;//Will adjust just about everything?
+$default-padding: 1.5rem;
+$default-margin: 1.5rem;
+
+//SAME AS BUTTONS FOR PADDING AND MARGINS
+//SPECIFY STYLES TO GENERATE THAT CAN BE APPLIED AND SET AS DEFAULTS
+
+
+//FOUNDATION STYLES: CAN BE OVERRIDDEN BUT NEEDED
 //GRID
 $row-width: rem-calc(1000);
 $total-columns: 12;
 $column-gutter: rem-calc(3);
-
+//MEDDIA QUERIES
 $small-range: (0em, 40em);
 $medium-range: (40.063em, 64em);
 $large-range: (64.063em, 90em);

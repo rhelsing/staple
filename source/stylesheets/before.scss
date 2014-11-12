@@ -1,7 +1,7 @@
 //before.scss
 //must be loaded before loading foundation because variables will affect foundation
 @import 'size';
-@import 'shape';
 @import 'color';
+@import 'utilities';
 @import 'typography';
 @import 'staple/overrides'
