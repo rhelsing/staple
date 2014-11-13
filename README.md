@@ -4,6 +4,9 @@ High level UI framework. Built on top of foundation.
 
 ##TODO
 
+* Tables
+* Sizes
+
 * See buttons for config
 * can pull in partials/components and new css, not included w/install
 * can then customize those with variables. Ask if you want to import if not in project
