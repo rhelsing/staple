@@ -8,7 +8,7 @@ module Staple
       generate "foundation:install", "--slim" #rails g foundation:install --slim
       # trim fat
       copy_file "source/stylesheets/foundation_and_overrides.scss", "app/assets/stylesheets/foundation_and_overrides.scss", :force => true
-      gsub_file "app/assets/javascripts/application.js", "$(function(){ $(document).foundation(); });", "var ready = function() {\n$(document).foundation();\n$(document).foundation('abide', {\ninit: false,\n});\n}\n\n$(ready);\n$(document).on('page:load', ready);"
+      gsub_file "app/assets/javascripts/application.js", "$(function(){ $(document).foundation(); });", "var ready = function() {\n\t$(document).foundation();\n\t$(document).foundation('abide', {\n\t\tinit: false,\n\t});\n}\n\n$(ready);\n$(document).on('page:load', ready);"
     end
 
     def simple_form_install
