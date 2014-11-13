@@ -4,9 +4,9 @@ High level UI framework. Built on top of foundation.
 
 ##TODO
 
-* Load vars then override before
-* Generate override components after using vars
-* Modify files using generators or manual
+* See buttons for config
+* can pull in partials/components and new css, not included w/install
+* can then customize those with variables. Ask if you want to import if not in project
 
 ##LOW PRIORITY
 * declaring as dependency does not load it?

@@ -1,13 +1,44 @@
-//IMPORT FONTS HERE
-$type-face-primary:"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$type-face-secondary:Georgia, Cambria, "Times New Roman", Times, serif;
+//IMPORT FONTS HERE Typekit vs google fonts
+// @import url(http://fonts.googleapis.com/css?family=Slabo+27px);
+// @import url(http://fonts.googleapis.com/css?family=Chivo);
+// @import url(http://fonts.googleapis.com/css?family=VT323);
+
+//DEFAULTS
+$typeface-primary: sans-serif;
+$typeface-secondary: serif;
+$typeface-tertiary: monospace;
+$normal-font-weight: 400;
+
+//NOT HOOKED UP YET:
+$default-font-size: 16px;
+$default-line-height: 150%;
+$default-letter-spacing: 0.005rem;
 
 //FOUNDATION STYLES: CAN BE OVERRIDDEN BUT NEEDED
-$font-family-sans-serif: $type-face-primary;
-$font-family-serif: $type-face-secondary;
-$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
-
+$font-family-sans-serif: $typeface-primary;
+$font-family-serif: $typeface-secondary;
+$font-family-monospace: $typeface-tertiary;
+$body-bg: $white;//can use any from colors
+$body-font-color: rgba($black, $transparent-strong);
+$body-font-family: $font-family-sans-serif;
+$body-font-weight: $normal-font-weight;
 
 //FONT CLASSES TO GENERATE
+$typeface-classes: primary secondary tertiary;
+$typeface-define: $typeface-primary $typeface-secondary $typeface-tertiary;
 
-//SET FONT
+//WEIGHT CLASSES IN ADDITION TO DEFAULT
+$weight-classes:light strong;
+$weight-define: 200 700;
+
+//TEXT Transform: Underline, uppercase, etc text-transform: uppercase, lowercase, capitalize;
+$transform-classes: up down cap;//shorter names for simplicity when chaining
+$transform-define: uppercase lowercase capitalize;
+
+//Letter spacing varients
+$spacing-classes: sleak wide;
+$spacing-define: 0.2rem 1rem;
+
+@import "builders/build_typography"
+
+//TODO: COOL FONT SHADOW EFFECT ON http://fittextjs.com

@@ -1,0 +1,35 @@
+@each $class in $typeface-classes {
+	$i: index($typeface-classes, $class);
+	$typeface: nth($typeface-define, $i);
+
+	.#{$class}{
+		font-family: $typeface;
+	}
+}
+
+@each $class in $weight-classes{
+	$i: index($weight-classes, $class);
+	$weight: nth($weight-define, $i);
+
+	.#{$class}{
+		font-weight: $weight;
+	}
+}
+
+@each $class in $transform-classes{
+	$i: index($transform-classes, $class);
+	$transform: nth($transform-define, $i);
+
+	.#{$class}{
+		text-transform: $transform;
+	}
+}
+
+@each $class in $spacing-classes{
+	$i: index($spacing-classes, $class);
+	$spacing: nth($spacing-define, $i);
+
+	.#{$class}{
+		letter-spacing: $spacing;
+	}
+}
