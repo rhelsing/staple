@@ -1,0 +1,81 @@
+@each $class in $padding-classes{
+	$i: index($padding-classes, $class);
+	$padding: nth($padding-define, $i);
+	.#{$class}{
+		padding: $padding;
+	}
+}
+
+@each $class in $margin-classes{
+	$i: index($margin-classes, $class);
+	$margin: nth($margin-define, $i);
+	.#{$class}{
+		margin: $margin;
+	}
+}
+
+//UNCOMMENT IF USING MARGIN ON SPECIFIC SIDES
+// @each $class in $margin-top-classes{
+// 	$i: index($margin-top-classes, $class);
+// 	$margin-top: nth($margin-top-define, $i);
+// 	.#{$class}{
+// 		margin-top: $margin-top;
+// 	}
+// }
+
+// @each $class in $margin-bottom-classes{
+// 	$i: index($margin-bottom-classes, $class);
+// 	$margin-bottom: nth($margin-bottom-define, $i);
+// 	.#{$class}{
+// 		margin-bottom: $margin-bottom;
+// 	}
+// }
+
+// @each $class in $margin-left-classes{
+// 	$i: index($margin-left-classes, $class);
+// 	$margin-left: nth($margin-left-define, $i);
+// 	.#{$class}{
+// 		margin-left: $margin-left;
+// 	}
+// }
+
+// @each $class in $margin-right-classes{
+// 	$i: index($margin-right-classes, $class);
+// 	$margin-right: nth($margin-right-define, $i);
+// 	.#{$class}{
+// 		margin-right: $margin-right;
+// 	}
+// }
+
+//UNCOMMENT IF USING PADDING ON SPECIFIC SIDES
+// @each $class in $padding-left-classes{
+// 	$i: index($padding-left-classes, $class);
+// 	$padding-left: nth($padding-left-define, $i);
+// 	.#{$class}{
+// 		padding-left: $padding-left;
+// 	}
+// }
+
+// @each $class in $padding-right-classes{
+// 	$i: index($padding-right-classes, $class);
+// 	$padding-right: nth($padding-right-define, $i);
+// 	.#{$class}{
+// 		padding-right: $padding-right;
+// 	}
+// }
+
+// @each $class in $padding-top-classes{
+// 	$i: index($padding-top-classes, $class);
+// 	$padding-top: nth($padding-top-define, $i);
+// 	.#{$class}{
+// 		padding-top: $padding-top;
+// 	}
+// }
+
+// @each $class in $padding-bottom-classes{
+// 	$i: index($padding-bottom-classes, $class);
+// 	$padding-bottom: nth($padding-bottom-define, $i);
+// 	.#{$class}{
+// 		padding-bottom: $padding-bottom;
+// 	}
+// }

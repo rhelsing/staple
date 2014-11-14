@@ -1,12 +1,40 @@
-//SCALE
+//APPLY TO EVERYTHING BE DEFAULT:
 $scale-factor: 1;//Will adjust just about everything?
+$rem-base: $scale-factor*16px;? //rem function// all thats needed?
 $default-padding: 1.5rem;
 $default-margin: 1.5rem;
 $border-size: 1px;//check if already exists
 
-//SAME AS BUTTONS FOR PADDING AND MARGINS
-//SPECIFY STYLES TO GENERATE THAT CAN BE APPLIED AND SET AS DEFAULTS
 
+//SPECIFY ADDITIONAL CLASSES TO GENERATE
+$padding-classes: 	pad1 	pad2 	pad3;
+$padding-define: 	1rem 	2rem 	3rem;
+
+$margin-classes: 	margin1 	margin2 	margin3;
+$margin-define: 	1rem 		2rem 		3rem;
+
+//UNCOMMENT FOR SPECIFIC SIDE CLASSES (MUST ALSO UNCOMMENT IN BUILD SIZES FILE)
+// $margin-left-classes:;
+// $margin-left-define: ;
+// $margin-right-classes:;
+// $margin-right-define: ;
+// $margin-top-classes:;
+// $margin-top-define: ;
+// $margin-bottom-classes:;
+// $margin-bottom-define: ;
+
+// $padding-bottom-classes;
+// $padding-bottom-define: ;
+// $padding-left-classes: ;
+// $padding-left-define: ;
+// $padding-right-classes;
+// $padding-right-define: ;
+// $padding-top-classes;
+// $padding-top-define: ;
+
+
+//GENERATE
+@import 'builders/build_sizes';
 
 //FOUNDATION STYLES: CAN BE OVERRIDDEN BUT NEEDED
 //GRID

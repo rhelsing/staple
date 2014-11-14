@@ -2,19 +2,32 @@
 
 High level UI framework. Built on top of foundation.
 
+#STRATEGY
+
+##Main
+* Overrides
+* Default Styles
+* Additional Styles
+* Generate
+
+##Import
+* Override defaults
+* Add additional
+	* Styles
+	* Type of generators
+* Components - inherit default styles
+
 ##TODO
 
-* Tables
-* Sizes
+* Incorporate sizes into eveything
+* Better default fonts
 
-* See buttons for config
-* can pull in partials/components and new css, not included w/install
-* can then customize those with variables. Ask if you want to import if not in project
 
 ##LOW PRIORITY
 * declaring as dependency does not load it?
 * integration with existing projects
 * turbolinks messed with abide validation: https://github.com/zurb/foundation/issues/2902
+* don't require other gems
 
 ##Install
 
