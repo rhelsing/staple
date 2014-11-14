@@ -1224,24 +1224,24 @@ $switch-label-outline: 1px dotted rgba($black, $transparent-medium);
 
 // These control the background color for the table and even rows
 $table-bg: $white;
-$table-even-row-bg: rgba($black, $transparent-light);
+$table-even-row-bg: none;
 
 // These control the table cell border style
 $table-border-style: solid;
-$table-border-size: 1px;
+$table-border-size: 0px;
 $table-border-color: rgba($black, $transparent-weak);
 
 // These control the table head styles
-$table-head-bg: rgba($black, $transparent-weak)  ;
+$table-head-bg: none;
 $table-head-font-size: rem-calc(14);
 $table-head-font-color: rgba($black, $transparent-strong);
-$table-head-font-weight: $font-weight-bold;
+$table-head-font-weight: $font-weight-normal;
 $table-head-padding: rem-calc(8 10 10);
 
 // These control the row padding and font styles
 $table-row-padding: rem-calc(9 10);
 $table-row-font-size: rem-calc(14);
-$table-row-font-color: rgba($black, $transparent-strong);
+$table-row-font-color: rgba($black, $transparent-medium);
 $table-line-height: rem-calc(18);
 
 // These are for controlling the layout, display and margin of tables
