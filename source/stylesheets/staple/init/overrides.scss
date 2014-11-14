@@ -51,19 +51,19 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // This is the default html and body font-size for the base rem value.
-$rem-base: $scale-factor*16px;
+// $rem-base: 16px;
 
 
-// The default font-size is set to 100% of the browser style sheet (usually 16px)
-// for compatibility with browser-based text zoom or user-set defaults.
+// // The default font-size is set to 100% of the browser style sheet (usually 16px)
+// // for compatibility with browser-based text zoom or user-set defaults.
 
-// Since the typical default browser font-size is 16px, that makes the calculation for grid size.
-// If you want your base font-size to be different and not have it affect the grid breakpoints,
-// set $rem-base to rgba($black, $transparent-medium)-font-size and make sure rgba($black, $transparent-medium)-font-size is a px value.
-$base-font-size: $scale-factor*100%;
+// // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
+// // If you want your base font-size to be different and not have it affect the grid breakpoints,
+// // set $rem-base to rgba($black, $transparent-medium)-font-size and make sure rgba($black, $transparent-medium)-font-size is a px value.
+// $base-font-size: 100%;
 
-// The rgba($black, $transparent-medium)-font-size is 100% while rgba($black, $transparent-medium)-line-height is 150%
-$base-line-height: $scale-factor*150%;
+// // The rgba($black, $transparent-medium)-font-size is 100% while rgba($black, $transparent-medium)-line-height is 150%
+// $base-line-height: 150%;
 
 // We use this to control whether or not CSS classes come through in the gem files.
 // $include-html-classes: true;
@@ -106,7 +106,7 @@ $font-smoothing: antialiased;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
-$shiny-edge-size: 0 1px 0;
+$shiny-edge-size: 0 $default-border-size 0;
 $shiny-edge-color: rgba($white, .5);
 $shiny-edge-active-color: rgba($black, .2);
 
@@ -161,18 +161,18 @@ $header-bottom-margin: .5rem;
 $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc($scale-factor*44);
-$h2-font-size: rem-calc($scale-factor*37);
-$h3-font-size: rem-calc($scale-factor*27);
-$h4-font-size: rem-calc($scale-factor*23);
-$h5-font-size: rem-calc($scale-factor*18);
-$h6-font-size: $scale-factor*1rem;
+$h1-font-size: rem-calc(44);
+$h2-font-size: rem-calc(37);
+$h3-font-size: rem-calc(27);
+$h4-font-size: rem-calc(23);
+$h5-font-size: rem-calc(18);
+$h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-$h1-font-reduction: rem-calc($scale-factor*10) !default;
-$h2-font-reduction: rem-calc($scale-factor*10) !default;
-$h3-font-reduction: rem-calc($scale-factor*5) !default;
-$h4-font-reduction: rem-calc($scale-factor*5) !default;
+$h1-font-reduction: rem-calc(10) !default;
+$h2-font-reduction: rem-calc(10) !default;
+$h3-font-reduction: rem-calc(5) !default;
+$h4-font-reduction: rem-calc(5) !default;
 $h5-font-reduction: 0 !default;
 $h6-font-reduction: 0 !default;
 
@@ -203,7 +203,7 @@ $code-color: rgba($black, $transparent-strong);
 $code-font-family: $font-family-monospace;
 $code-font-weight: $font-weight-normal;
 $code-background-color: scale-color($secondary-color, $lightness: 70%);
-$code-border-size: 1px;
+$code-border-size: $default-border-size;
 $code-border-style: solid;
 $code-border-color: scale-color($code-background-color, $lightness: -10%);
 $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
@@ -215,7 +215,7 @@ $anchor-font-color: $primary-color;
 $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
-$hr-border-width: 1px;
+$hr-border-width: $default-border-size;
 $hr-border-style: solid;
 $hr-border-color: rgba($black, $transparent-weak);
 $hr-margin: rem-calc(20);
@@ -237,20 +237,20 @@ $definition-list-margin-bottom: rem-calc(12);
 // We use these to style blockquotes
 $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
 $blockquote-padding: rem-calc(9 20 0 19);
-$blockquote-border: 1px solid rgba($black, $transparent-weak);
+$blockquote-border: $default-border-size solid rgba($black, $transparent-weak);
 $blockquote-cite-font-size: rem-calc(13);
 $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
 $blockquote-cite-link-color: $blockquote-cite-font-color;
 
 // Acronym styles
-$acronym-underline: 1px dotted rgba($black, $transparent-weak);
+$acronym-underline: $default-border-size dotted rgba($black, $transparent-weak);
 
 // We use these to control padding and margin
 $microformat-padding: rem-calc(10 12);
 $microformat-margin: rem-calc(0 0 20 0);
 
 // We use these to control the border styles
-$microformat-border-width: 1px;
+$microformat-border-width: $default-border-size;
 $microformat-border-style: solid;
 $microformat-border-color: rgba($black, $transparent-weak);
 
@@ -306,7 +306,7 @@ $microformat-abbr-font-decoration: none;
 
 // We use these to control border styles.
 // $alert-border-style: solid;
-// $alert-border-width: 1px;
+// $alert-border-width: $default-border-size;
 // $alert-border-color: scale-color($primary-color, $lightness: $alert-function-factor);
 // $alert-bottom-margin: rem-calc(20);
 
@@ -354,7 +354,7 @@ $microformat-abbr-font-decoration: none;
 
 // We use these to control border styles.
 // $crumb-function-factor: -10%;
-// $crumb-border-size: 1px;
+// $crumb-border-size: $default-border-size;
 // $crumb-border-style: solid;
 // $crumb-border-color: scale-color($crumb-bg, $lightness: $crumb-function-factor);
 // $crumb-radius: $global-radius;
@@ -377,23 +377,23 @@ $microformat-abbr-font-decoration: none;
 // $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
-$button-tny: rem-calc($scale-factor*10);
-$button-sml: rem-calc($scale-factor*14);
-$button-med: rem-calc($scale-factor*16);
-$button-lrg: rem-calc($scale-factor*18);
+$button-tny: rem-calc(10);
+$button-sml: rem-calc(14);
+$button-med: rem-calc(16);
+$button-lrg: rem-calc(18);
 
 // We use this to control the display property.
 $button-display: inline-block;
-$button-margin-bottom: rem-calc($scale-factor*20);
+$button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
 $button-font-family: $body-font-family;
 $button-font-color: $white;
 $button-font-color-alt: rgba($black, $transparent-strong);
-$button-font-tny: rem-calc($scale-factor*11);
-$button-font-sml: rem-calc($scale-factor*13);
-$button-font-med: rem-calc($scale-factor*15);
-$button-font-lrg: rem-calc($scale-factor*21);
+$button-font-tny: rem-calc(11);
+$button-font-sml: rem-calc(13);
+$button-font-med: rem-calc(15);
+$button-font-lrg: rem-calc(21);
 $button-font-weight: 200;
 $button-font-align: center;
 
@@ -428,7 +428,7 @@ $button-disabled-opacity: 0.7;
 
 // Sets the margin for the right side by default, and the left margin if right-to-left direction is used
 $button-bar-margin-opposite: rem-calc(10);
-$button-group-border-width: 1px;
+$button-group-border-width: $default-border-size;
 
 // 07. Clearing
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -458,7 +458,7 @@ $button-group-border-width: 1px;
 // $clearing-active-img-height: 85%;
 // $clearing-carousel-height: 120px;
 // $clearing-carousel-thumb-width: 120px;
-// $clearing-carousel-thumb-active-border: 1px solid rgb(255,255,255);
+// $clearing-carousel-thumb-active-border: $default-border-size solid rgb(255,255,255);
 
 // 08. Dropdown
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -487,7 +487,7 @@ $button-group-border-width: 1px;
 
 // We use this to set the border styles for dropdowns.
 // $f-dropdown-border-style: solid;
-// $f-dropdown-border-width: 1px;
+// $f-dropdown-border-width: $default-border-size;
 // $f-dropdown-border-color: scale-color($white, $lightness: -20%);
 
 // We use these to style the triangle pip.
@@ -568,7 +568,7 @@ $button-group-border-width: 1px;
 // $include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
-$form-spacing: rem-calc($scale-factor*16);
+$form-spacing: rem-calc(16);
 
 // We use these to style the labels in different ways
 $form-label-pointer: default;
@@ -586,7 +586,7 @@ $input-focus-bg-color: default;
 $input-border-color: scale-color($white, $lightness: -20%);
 $input-focus-border-color: $primary-color;
 $input-border-style: solid;
-$input-border-width: 1px;
+$input-border-width: $default-border-size;
 $input-border-radius: $global-radius;
 $input-disabled-bg: rgba($black, $transparent-weak);
 // $input-disabled-cursor: $cursor-default-value;
@@ -594,7 +594,7 @@ $input-box-shadow: none;
 
 // We use these to style the fieldset border and spacing.
 $fieldset-border-style: solid;
-$fieldset-border-width: 1px;
+$fieldset-border-width: $default-border-size;
 $fieldset-border-color: rgba($black, $transparent-weak);
 $fieldset-padding: rem-calc(20);
 $fieldset-margin: rem-calc(18 0);
@@ -607,7 +607,7 @@ $legend-padding: rem-calc(0 3);
 // We use these to style the prefix and postfix input elements
 $input-prefix-bg: scale-color($white, $lightness: -5%);
 $input-prefix-border-color: scale-color($white, $lightness: -20%);
-$input-prefix-border-size: 1px;
+$input-prefix-border-size: $default-border-size;
 $input-prefix-border-type: solid;
 $input-prefix-overflow: hidden;
 $input-prefix-font-color: rgba($black, $transparent-strong);
@@ -682,7 +682,7 @@ $inline-list-children-display: block;
 // $joyride-tip-bg: rgba($black, $transparent-strong);
 // $joyride-tip-default-width: 300px;
 // $joyride-tip-padding: rem-calc(18 20 24);
-// $joyride-tip-border: solid 1px rgba($black, $transparent-strong);
+// $joyride-tip-border: solid $default-border-size rgba($black, $transparent-strong);
 // $joyride-tip-radius: 4px;
 // $joyride-tip-position-offset: 22px;
 
@@ -725,7 +725,7 @@ $inline-list-children-display: block;
 // We use these to control background and border styles.
 // $keystroke-bg: scale-color($white, $lightness: $keystroke-function-factor);
 // $keystroke-border-style: solid;
-// $keystroke-border-width: 1px;
+// $keystroke-border-width: $default-border-size;
 // $keystroke-border-color: scale-color($keystroke-bg, $lightness: $keystroke-function-factor);
 // $keystroke-radius: $global-radius;
 
@@ -766,8 +766,8 @@ $inline-list-children-display: block;
 // $tabbar-middle-padding: 0 rem-calc(10);
 
 // Off Canvas Divider Styles
-// $tabbar-right-section-border: solid 1px scale-color($tabbar-bg, $lightness: 13%);
-// $tabbar-left-section-border: solid 1px scale-color($tabbar-bg, $lightness: -50%);
+// $tabbar-right-section-border: solid $default-border-size scale-color($tabbar-bg, $lightness: 13%);
+// $tabbar-left-section-border: solid $default-border-size scale-color($tabbar-bg, $lightness: -50%);
 
 // Off Canvas Tab Bar Headers
 // $tabbar-header-color: $white;
@@ -787,17 +787,17 @@ $inline-list-children-display: block;
 // $off-canvas-label-font-size: rem-calc(12);
 // $off-canvas-label-font-weight: $font-weight-bold;
 // $off-canvas-label-bg: rgba($black, $transparent-strong);
-// $off-canvas-label-border-top: 1px solid scale-color(rgba($black, $transparent-strong), $lightness: 14%);
+// $off-canvas-label-border-top: $default-border-size solid scale-color(rgba($black, $transparent-strong), $lightness: 14%);
 // $off-canvas-label-border-bottom: none;
 // $off-canvas-label-margin:0;
 // $off-canvas-link-padding: rem-calc(10, 15);
 // $off-canvas-link-color: rgba($white, 0.7);
-// $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%);
+// $off-canvas-link-border-bottom: $default-border-size solid scale-color($off-canvas-bg, $lightness: -25%);
 // $off-canvas-back-bg: rgba($black, $transparent-strong);
 // $off-canvas-back-border-top: $off-canvas-label-border-top;
 // $off-canvas-back-border-bottom: $off-canvas-label-border-bottom;
 // $off-canvas-back-hover-bg: scale-color($off-canvas-back-bg, $lightness: -30%);
-// $off-canvas-back-hover-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%);
+// $off-canvas-back-hover-border-top: $default-border-size solid scale-color($off-canvas-label-bg, $lightness: 14%);
 // $off-canvas-back-hover-border-bottom: none;
 
 // Off Canvas Menu Icon Variables
@@ -812,7 +812,7 @@ $inline-list-children-display: block;
 // $tabbar-hamburger-icon-width: rem-calc(16);
 // $tabbar-hamburger-icon-left: false;
 // $tabbar-hamburger-icon-top: false;
-// $tabbar-hamburger-icon-thickness: 1px;
+// $tabbar-hamburger-icon-thickness: $default-border-size;
 // $tabbar-hamburger-icon-gap: 6px;
 
 // Off Canvas Back-Link Overlay
@@ -909,15 +909,15 @@ $inline-list-children-display: block;
 // We use these to control the background and border styles
 $panel-bg: scale-color($white, $lightness: -5%);
 $panel-border-style: solid;
-$panel-border-size: 1px;
+$panel-border-size: $default-border-size;
 
 // We use this % to control how much we darken things on hover
 $panel-function-factor: -11%;
 $panel-border-color: scale-color($panel-bg, $lightness: $panel-function-factor);
 
 // We use these to set default inner padding and bottom margin
-$panel-margin-bottom: rem-calc($scale-factor*20);
-$panel-padding: rem-calc($scale-factor*20);
+$panel-margin-bottom: rem-calc(20);
+$panel-padding: rem-calc(20);
 
 // We use these to set default font colors
 $panel-font-color: rgba($black, $transparent-strong);
@@ -932,7 +932,7 @@ $callout-panel-link-color: $primary-color;
 // $include-html-pricing-classes: $include-html-classes;
 
 // We use this to control the border color
-// $price-table-border: solid 1px rgba($black, $transparent-weak);
+// $price-table-border: solid $default-border-size rgba($black, $transparent-weak);
 
 // We use this to control the bottom margin of the pricing table
 // $price-table-margin-bottom: rem-calc(20);
@@ -963,7 +963,7 @@ $callout-panel-link-color: $primary-color;
 // $price-desc-font-size: rem-calc(12);
 // $price-desc-weight: $font-weight-normal;
 // $price-desc-line-height: 1.4;
-// $price-desc-bottom-border: dotted 1px rgba($black, $transparent-weak);
+// $price-desc-bottom-border: dotted $default-border-size rgba($black, $transparent-weak);
 
 // We use these to control the list item styles
 // $price-item-color: rgba($black, $transparent-strong);
@@ -971,7 +971,7 @@ $callout-panel-link-color: $primary-color;
 // $price-item-align: center;
 // $price-item-font-size: rem-calc(14);
 // $price-item-weight: $font-weight-normal;
-// $price-item-bottom-border: dotted 1px rgba($black, $transparent-weak);
+// $price-item-bottom-border: dotted $default-border-size rgba($black, $transparent-weak);
 
 // We use these to control the CTA area styles
 // $price-cta-bg: $white;
@@ -989,7 +989,7 @@ $callout-panel-link-color: $primary-color;
 
 // We use these to control the border styles
 // $progress-bar-border-color: scale-color($white, $lightness: 20%);
-// $progress-bar-border-size: 1px;
+// $progress-bar-border-size: $default-border-size;
 // $progress-bar-border-style: solid;
 // $progress-bar-border-radius: $global-radius;
 
@@ -1012,7 +1012,7 @@ $callout-panel-link-color: $primary-color;
 // $range-slider-bar-width: 100%;
 // $range-slider-bar-height: rem-calc(16);
 
-// $range-slider-bar-border-width: 1px;
+// $range-slider-bar-border-width: $default-border-size;
 // $range-slider-bar-border-style: solid;
 // $range-slider-bar-border-color: rgba($black, $transparent-weak);
 // $range-slider-radius: $global-radius;
@@ -1028,7 +1028,7 @@ $callout-panel-link-color: $primary-color;
 // $range-slider-handle-height: rem-calc(22);
 // $range-slider-handle-position-top: rem-calc(-5);
 // $range-slider-handle-bg-color: $primary-color;
-// $range-slider-handle-border-width: 1px;
+// $range-slider-handle-border-width: $default-border-size;
 // $range-slider-handle-border-style: solid;
 // $range-slider-handle-border-color: none;
 // $range-slider-handle-radius: $global-radius;
@@ -1066,7 +1066,7 @@ $callout-panel-link-color: $primary-color;
 
 // We use these to control the modal border
 // $reveal-border-style: solid;
-// $reveal-border-width: 1px;
+// $reveal-border-width: $default-border-size;
 // $reveal-border-color: rgba($black, $transparent-medium);
 
 // $reveal-modal-class: "reveal-modal";
@@ -1105,7 +1105,7 @@ $side-nav-heading-font-weight: bold;
 $side-nav-heading-text-transform: uppercase;
 
 // We use these to control border styles
-$side-nav-divider-size: 1px;
+$side-nav-divider-size: $default-border-size;
 $side-nav-divider-style: solid;
 $side-nav-divider-color: scale-color($white, $lightness: 10%);
 
@@ -1186,7 +1186,7 @@ $sub-nav-item-divider-margin: rem-calc(12);
 // Controlling border styles and background colors for the switch container
 $switch-border-color: scale-color($white, $lightness: -20%);
 $switch-border-style: solid;
-$switch-border-width: 1px;
+$switch-border-width: $default-border-size;
 $switch-bg: $white;
 
 // We use these to control the switch heights for our default classes
@@ -1207,7 +1207,7 @@ $switch-label-side-padding: 6px;
 $switch-paddle-bg: $white;
 $switch-paddle-fade-to-color: scale-color($switch-paddle-bg, $lightness: -10%);
 $switch-paddle-border-color: scale-color($switch-paddle-bg, $lightness: -35%);
-$switch-paddle-border-width: 1px;
+$switch-paddle-border-width: $default-border-size;
 $switch-paddle-border-style: solid;
 $switch-paddle-transition-speed: .1s;
 $switch-paddle-transition-ease: ease-out;
@@ -1215,7 +1215,7 @@ $switch-positive-color: scale-color($success-color, $lightness: 94%);
 $switch-negative-color: rgba($black, $transparent-weak);
 
 // Outline Style for tabbing through switches
-$switch-label-outline: 1px dotted rgba($black, $transparent-medium);
+$switch-label-outline: $default-border-size dotted rgba($black, $transparent-medium);
 
 // 30. Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1277,8 +1277,8 @@ $table-margin-bottom: rem-calc(20);
 // $thumb-border-style: solid;
 // $thumb-border-width: 4px;
 // $thumb-border-color: $white;
-// $thumb-box-shadow: 0 0 0 1px rgba($black,.2);
-// $thumb-box-shadow-hover: 0 0 6px 1px rgba($primary-color,0.5);
+// $thumb-box-shadow: 0 0 0 $default-border-size rgba($black,.2);
+// $thumb-box-shadow-hover: 0 0 6px $default-border-size rgba($primary-color,0.5);
 
 // Radius and transition speed for thumbs
 // $thumb-radius: $global-radius;
@@ -1289,10 +1289,10 @@ $table-margin-bottom: rem-calc(20);
 
 // $include-html-tooltip-classes: $include-html-classes;
 
-// $has-tip-border-bottom: dotted 1px rgba($black, $transparent-weak);
+// $has-tip-border-bottom: dotted $default-border-size rgba($black, $transparent-weak);
 // $has-tip-font-weight: $font-weight-bold;
 // $has-tip-font-color: rgba($black, $transparent-strong);
-// $has-tip-border-bottom-hover: dotted 1px scale-color($primary-color, $lightness: -55%);
+// $has-tip-border-bottom-hover: dotted $default-border-size scale-color($primary-color, $lightness: -55%);
 // $has-tip-font-color-hover: $primary-color;
 // $has-tip-cursor-type: help;
 
@@ -1381,8 +1381,8 @@ $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for alway
 // $topbar-media-query: $medium-up;
 
 // Divider Styles
-$topbar-divider-border-bottom: solid 1px  scale-color($topbar-bg-color, $lightness: 13%);
-$topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
+$topbar-divider-border-bottom: solid $default-border-size  scale-color($topbar-bg-color, $lightness: 13%);
+$topbar-divider-border-top: solid $default-border-size scale-color($topbar-bg-color, $lightness: -50%);
 
 // Sticky Class
 $topbar-sticky-class: ".sticky";

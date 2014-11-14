@@ -1,8 +1,8 @@
 //APPLY TO EVERYTHING BE DEFAULT:
-$scale-factor: 1;//Will adjust just about everything?
-$rem-base: $scale-factor*16px;? //rem function// all thats needed?
-$default-padding: 1.5rem;
-$default-margin: 1.5rem;
+$rem-base: 16px;
+$base-font-size: 100%;
+$base-line-height: 150%;
+
 $border-size: 1px;//check if already exists
 
 
