@@ -6,8 +6,8 @@ module Staple
     source_root File.expand_path("../../../source", __FILE__)
     argument :args, type: :string, required: true
     def init
-        puts arguments
-        @component, @pattern, @append = args.split(" ")
+        puts :args
+        # @component, @pattern, @append = args.split(" ")
     end
 
     def copy_styles
@@ -47,10 +47,6 @@ module Staple
         else
             return false;
         end
-    end
-
-    def arguments
-        "_#{args}"
     end
 
     # def copy_file_if_exists(source, destination)
