@@ -10,10 +10,6 @@ $success-color: success($primary-color);//green
 $warning-color: warning($primary-color);//yellow/orange
 $info-color: info($primary-color);//blue
 
-//BUTTON CLASSES TO GENERATE:
-$button-classes: 		primary 		compliment 			secondary 			tertiary;
-$button-define: 		$primary-color 	$complement-color	$secondary-color 	$tertiary-color;
-
 //ACCENTS CLASSES TO GENERATE: (BACKGROUNDS, BORDERS, AND TEXT-COLOR)
 $white: #ffffff;
 $black: #000000;
@@ -31,3 +27,5 @@ $opacity-define:$transparent-light 	$transparent-weak 	$transparent-medium 	$tra
 //DIFFERENCE IN SHADE WHEN ACCENTING COMPONENTS
 $primary-difference: 30;
 $transition-brighten: 8%;
+
+//PUT BUILDER HERE?

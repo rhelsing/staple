@@ -1,22 +1,15 @@
-//IMPORT FONTS HERE Typekit vs google fonts
-// @import url(http://fonts.googleapis.com/css?family=Slabo+27px);
-// @import url(http://fonts.googleapis.com/css?family=Chivo);
-// @import url(http://fonts.googleapis.com/css?family=VT323);
+//IMPORT FONTS HERE Typekit and Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
 
 //DEFAULTS
-$typeface-primary: sans-serif;
-$typeface-secondary: serif;
-$typeface-tertiary: monospace;
+$typeface-primary: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$typeface-secondary: "Roboto Slab", serif;
+$typeface-tertiary: "Inconsolata", monospace;
 $normal-font-weight: 400;
-
-//FOUNDATION STYLES: CAN BE OVERRIDDEN BUT NEEDED
-$font-family-sans-serif: $typeface-primary;
-$font-family-serif: $typeface-secondary;
-$font-family-monospace: $typeface-tertiary;
-$body-bg: $white;//can use any from colors
-$body-font-color: rgba($black, $transparent-strong);
-$body-font-family: $font-family-sans-serif;
-$body-font-weight: $normal-font-weight;
+$header-font-weight: 300;
+$subheader-font-weight: 400;
 
 //FONT CLASSES TO GENERATE
 $typeface-classes: primary secondary tertiary;
@@ -37,3 +30,12 @@ $spacing-define: 0.2rem 1rem;
 @import "builders/build_typography"
 
 //TODO: COOL FONT SHADOW EFFECT ON http://fittextjs.com
+
+//FOUNDATION STYLES: CAN BE OVERRIDDEN BUT NEEDED
+$font-family-sans-serif: $typeface-primary;
+$font-family-serif: $typeface-secondary;
+$font-family-monospace: $typeface-tertiary;
+$body-bg: $white;//can use any from colors
+$body-font-color: rgba($black, $transparent-strong);
+$body-font-family: $font-family-sans-serif;
+$body-font-weight: $normal-font-weight;

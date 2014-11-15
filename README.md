@@ -19,15 +19,14 @@ High level UI framework. Built on top of foundation.
 
 ##TODO
 
-* Incorporate sizes into eveything
-* Better default fonts
-
+* Generators
+* Remove app.erb? when?
 
 ##LOW PRIORITY
 * declaring as dependency does not load it?
 * integration with existing projects
-* turbolinks messed with abide validation: https://github.com/zurb/foundation/issues/2902
 * don't require other gems
+* reinstall places foundation again then does replace, seperate generator for update?
 
 ##Install
 

@@ -152,7 +152,7 @@ $shiny-edge-active-color: rgba($black, .2);
 
 //We use these to control header font styles
 $header-font-family: $body-font-family;
-$header-font-weight: $font-weight-normal;
+// $header-font-weight: $font-weight-normal;
 $header-font-style: normal;
 $header-font-color: rgba($black, $transparent-strong);
 $header-line-height: 1.4;
@@ -179,7 +179,7 @@ $h6-font-reduction: 0 !default;
 // These control how subheaders are styled.
 $subheader-line-height: 1.4;
 $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
-$subheader-font-weight: $font-weight-normal;
+// $subheader-font-weight: $font-weight-normal;
 $subheader-top-margin: .2rem;
 $subheader-bottom-margin: .5rem;
 

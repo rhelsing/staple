@@ -1,3 +1,18 @@
 //SET DEFAULT BUTTON STYLE with variables. Modify variables with thor/generators
-//Variables determine what to write to css
+//DEFAULT
+.button{
+	background-color: $primary-color;
+	color: set-text-color($primary-color);
+	font-weight: 200;
+ 	letter-spacing: 1px;
+ 	transition: background-color 150ms ease-out;
+}
+.button:hover{
+	background-color: lighten($primary-color, $transition-brighten);
+}
+//Variables determine what to generate to css
+//BUTTON CLASSES TO GENERATE: (look in colors)
+$button-classes: 		primary 		compliment 			secondary 			tertiary;
+$button-define: 		$primary-color 	$complement-color	$secondary-color 	$tertiary-color;
+
 @import 'builders/build_buttons'
