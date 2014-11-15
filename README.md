@@ -19,7 +19,8 @@ High level UI framework. Built on top of foundation.
 
 ##TODO
 
-* Generators
+* Generators append and remove (both)
+* Formalize process
 
 ##LOW PRIORITY
 * declaring as dependency does not load it?

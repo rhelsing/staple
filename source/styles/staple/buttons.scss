@@ -1,6 +1,6 @@
 //SET DEFAULT BUTTON STYLE with variables. Modify variables with thor/generators
 //DEFAULT
-.button{
+.button, input[type="submit"]{
 	background-color: $primary-color;
 	color: set-text-color($primary-color);
 	font-weight: 200;
