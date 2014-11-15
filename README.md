@@ -76,6 +76,12 @@ staple type-face-secondary:ComicSans
 staple color-scheme:Flatland
 ```
 
+staple (append) {button-style|button-theme} {id}
+rails g staple:import
+
+if append, add content from appropriate file
+if not append, replace default with content
+
 ##Build
 
 gem build staple.gemspec
