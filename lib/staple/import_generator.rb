@@ -4,9 +4,8 @@ module Staple
   class ImportGenerator < Rails::Generators::Base
     desc 'bring in the staple'
     source_root File.expand_path("../../../source", __FILE__)
-    argument :component, type: :string, required: true
-    argument :pattern, type: :string, required: true
-    argument :append, type: :string
+    argument :args, type: :string, required: true
+    @component, @patter, @append = args.split(" ")
 
     def copy_styles
         puts "style"
@@ -30,7 +29,7 @@ module Staple
 
     def contents
         file = File.join('styles', "#{component}", pattern_name)
-        if File.exist?(file)
+        if File.file?(file)
             return File.read(file)
         end
     end
