@@ -12,8 +12,10 @@ module Staple
         puts "style"
         if append?
             puts "append"
+            puts contents if contents
         else
             puts "replace default"
+            puts contents if contents
         end
     end
 
@@ -24,21 +26,18 @@ module Staple
     #   )
     # end
 
-    # def copy_styles
-    #   copy_file_if_exists(
-    #     File.join('stylesheets', 'refills', stylesheet_name),
-    #     File.join('app', 'assets', 'stylesheets', 'refills', stylesheet_name),
-    #   )
-    # end
-
-    # def copy_javascripts
-    #   copy_file_if_exists(
-    #     File.join('javascripts', 'refills', javascript_name),
-    #     File.join('app', 'assets', 'javascripts', 'refills', javascript_name),
-    #   )
-    # end
-
     private
+
+    def contents
+        file = File.join('styles', "#{component}", pattern_name)
+        if File.exist?(file)
+            return File.read(file)
+        end
+    end
+
+    def pattern_name
+      "_#{pattern.dasherize}.scss"
+    end
 
     def append?
         if append && append == "append"
@@ -56,10 +55,6 @@ module Staple
 
     # def partial_name
     #   "_#{snippet.underscore}.html.erb"
-    # end
-
-    # def stylesheet_name
-    #   "_#{snippet.dasherize}.scss"
     # end
 
     # def javascript_name

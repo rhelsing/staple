@@ -77,7 +77,10 @@ staple color-scheme:Flatland
 ```
 
 staple {button-style|button-theme} {pattern} (append)
-rails g staple:import
+staple buttons round
+staple buttons-theme plastic
+
+rails g staple:import buttons round append
 
 if append, add content from appropriate file
 if not append, replace default with content
