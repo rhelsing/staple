@@ -13,11 +13,9 @@
 	.button.#{$color}{
 		background-color: $temp-color;
 		color: set-text-color($temp-color);
+		//DO NOT MODIFY THIS (Needed for import to work) :%>>
 	}
 	.button.#{$color}:hover{
 		background-color: lighten($temp-color, $transition-brighten);
 	}
 }
-
-//MODIFY DEFAULT STYLE
-//APPEND ADDITIONAL GENERATORS WITH COMMANDS AS NEEDED
