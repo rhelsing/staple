@@ -21,8 +21,9 @@ module Staple
         else
             puts "add to default"#vs replace default.. theme replaces?
             if contents
-                insert_into_file "app/assets/stylesheets/staple/buttons.scss", "#{contents}\n", :after => ":%>>"
-                insert_into_file "app/assets/stylesheets/staple/builders/build_buttons.scss", "#{contents}\n", :after => ":%>>"
+                #replace component
+                insert_into_file "app/assets/stylesheets/staple/#{component}.scss", "\n#{contents}\n", :after => ":%>>"
+                insert_into_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n#{contents}\n", :after => ":%>>"
                 #:%>>h = hover?
             else
                 puts "invalid operation"
