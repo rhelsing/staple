@@ -76,7 +76,7 @@ staple type-face-secondary:ComicSans
 staple color-scheme:Flatland
 ```
 
-staple (append) {button-style|button-theme} {id}
+staple {button-style|button-theme} {pattern} (append)
 rails g staple:import
 
 if append, add content from appropriate file

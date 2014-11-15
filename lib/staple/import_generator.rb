@@ -2,9 +2,20 @@ require 'rails/generators'
 
 module Staple
   class ImportGenerator < Rails::Generators::Base
-    desc 'Copy refills'
-    # source_root File.expand_path("../../../source", __FILE__)
-    # argument :snippet, type: :string, required: true
+    desc 'bring in the staple'
+    source_root File.expand_path("../../../source", __FILE__)
+    argument :component, type: :string, required: true
+    argument :pattern, type: :string, required: true
+    argument :append, type: :string
+
+    def copy_styles
+        puts "style"
+        if append?
+            puts "append"
+        else
+            puts "replace default"
+        end
+    end
 
     # def copy_html
     #   copy_file_if_exists(
@@ -27,7 +38,15 @@ module Staple
     #   )
     # end
 
-    # private
+    private
+
+    def append?
+        if append && append == "append"
+            return true;
+        else
+            return false;
+        end
+    end
 
     # def copy_file_if_exists(source, destination)
     #   if File.exists?(File.join(self.class.source_root, source))

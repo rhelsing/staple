@@ -8,7 +8,7 @@ module Staple
       generate "foundation:install", "--slim" #rails g foundation:install --slim
       # trim fat
       remove_file 'app/views/layout/application.html.erb'
-      copy_file "source/stylesheets/foundation_and_overrides.scss", "app/assets/stylesheets/foundation_and_overrides.scss", :force => true
+      copy_file "source/styles/foundation_and_overrides.scss", "app/assets/stylesheets/foundation_and_overrides.scss", :force => true
       gsub_file "app/assets/javascripts/application.js", "$(function(){ $(document).foundation(); });", "var ready = function() {\n\t$(document).foundation();\n\t$(document).foundation('abide', {\n\t\tinit: false,\n\t});\n}\n\n$(ready);\n$(document).on('page:load', ready);"
     end
 
@@ -50,8 +50,10 @@ module Staple
 
     #import base style
     def staple_install
-      directory "source/stylesheets/staple", "app/assets/stylesheets/staple"
+      directory "source/styles/staple", "app/assets/stylesheets/staple"
     end
+
+    private
 
     def detect_css_format
       return ['.css', ' *='] if File.exist?('app/assets/stylesheets/application.css')
