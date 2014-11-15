@@ -5,7 +5,10 @@ module Staple
     desc 'bring in the staple'
     source_root File.expand_path("../../../source", __FILE__)
     argument :args, type: :string, required: true
-    @component, @pattern, @append = args.split(" ")
+    def init
+        puts arguments
+        @component, @pattern, @append = args.split(" ")
+    end
 
     def copy_styles
         puts "style"
@@ -46,7 +49,7 @@ module Staple
         end
     end
 
-    def args
+    def arguments
         "_#{args}"
     end
 
