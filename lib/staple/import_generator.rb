@@ -15,12 +15,12 @@ module Staple
             puts "append"
             file = File.join('styles', "#{component}", pattern_name)
             puts file
-            puts File.read(file)
+            puts File.read(destination_path(file))
         else
             puts "replace default"
             file = File.join('styles', "#{component}", pattern_name)
             puts file
-            puts File.read(file)
+            puts File.read(destination_path(file))
         end
     end
 
