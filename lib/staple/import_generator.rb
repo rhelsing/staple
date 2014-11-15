@@ -5,7 +5,7 @@ module Staple
     desc 'bring in the staple'
     source_root File.expand_path("../../../source", __FILE__)
     argument :args, type: :string, required: true
-    @component, @patter, @append = args.split(" ")
+    @component, @pattern, @append = :args.split(" ")
 
     def copy_styles
         puts "style"
@@ -28,18 +28,18 @@ module Staple
     private
 
     def contents
-        file = File.join('styles', "#{component}", pattern_name)
+        file = File.join('styles', "#{@component}", pattern_name)
         if File.file?(file)
             return File.read(file)
         end
     end
 
     def pattern_name
-      "_#{pattern.dasherize}.scss"
+      "_#{@pattern.dasherize}.scss"
     end
 
     def append?
-        if append && append == "append"
+        if @append && @append == "append"
             return true;
         else
             return false;
