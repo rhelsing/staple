@@ -3,7 +3,7 @@ require 'rails/generators'
 module Staple
   class ImportGenerator < Rails::Generators::Base
     desc 'bring in the staple'
-    source_root File.expand_path("../../../source", __FILE__)
+    source_root File.join(File.dirname(__FILE__), '..', '..')
     argument :actions, :type => :array, :default => []
     def init
         puts "#{actions}"
