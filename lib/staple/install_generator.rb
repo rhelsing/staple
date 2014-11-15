@@ -7,6 +7,7 @@ module Staple
     def foundation_install
       generate "foundation:install", "--slim" #rails g foundation:install --slim
       # trim fat
+      remove_file 'app/views/layout/application.html.erb'
       copy_file "source/stylesheets/foundation_and_overrides.scss", "app/assets/stylesheets/foundation_and_overrides.scss", :force => true
       gsub_file "app/assets/javascripts/application.js", "$(function(){ $(document).foundation(); });", "var ready = function() {\n\t$(document).foundation();\n\t$(document).foundation('abide', {\n\t\tinit: false,\n\t});\n}\n\n$(ready);\n$(document).on('page:load', ready);"
     end

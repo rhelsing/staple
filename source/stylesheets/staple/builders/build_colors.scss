@@ -18,13 +18,13 @@
 	$i: index($accent-classes, $class);
 	$color: nth($accent-define, $i);
 	.#{$class}-border{
-		border: $border-size solid $color;
+		border: $default-border-size solid $color;
 	}
 	@each $value in $opacity-values {
 		$j: index($opacity-values, $value);
 		$opacity: nth($opacity-define, $j);
 		.#{$class}-border-#{$value}{
-			border: $border-size solid rgba($color, $opacity);
+			border: $default-border-size solid rgba($color, $opacity);
 		}
 	}
 }

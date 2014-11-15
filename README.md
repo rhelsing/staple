@@ -20,7 +20,6 @@ High level UI framework. Built on top of foundation.
 ##TODO
 
 * Generators
-* Remove app.erb? when?
 
 ##LOW PRIORITY
 * declaring as dependency does not load it?
