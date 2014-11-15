@@ -6,7 +6,7 @@ module Staple
     source_root File.expand_path("../../../source", __FILE__)
     argument :args, type: :string, required: true
     def init
-        puts :args
+        puts "#{args}"
         # @component, @pattern, @append = args.split(" ")
     end
 
