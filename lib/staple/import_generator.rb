@@ -13,13 +13,13 @@ module Staple
         puts "style"
         if append?
             puts "append"
-            file = File.join('styles', "#{component}", pattern_name)
+            file = File.join('source', 'styles', "#{component}", pattern_name)
             puts file
             puts File.read(File.join(self.class.source_root, file))
             # puts File.read(File.join(destination_root, file))
         else
             puts "replace default"
-            file = File.join('styles', "#{component}", pattern_name)
+            file = File.join('source', 'styles', "#{component}", pattern_name)
             puts file
             puts File.read(File.join(self.class.source_root, file))
         end
