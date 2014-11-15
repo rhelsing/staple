@@ -4,22 +4,22 @@ module Staple
   class ImportGenerator < Rails::Generators::Base
     desc 'bring in the staple'
     source_root File.expand_path("../../../source", __FILE__)
-    argument :args, type: :string, required: true
+    argument :actions, :type => :array, :default => [], :banner => "action action"
     def init
-        puts "#{args}"
+        puts "#{actions}"
         # @component, @pattern, @append = args.split(" ")
     end
 
-    def copy_styles
-        puts "style"
-        if append?
-            puts "append"
-            puts contents if contents
-        else
-            puts "replace default"
-            puts contents if contents
-        end
-    end
+    # def copy_styles
+    #     puts "style"
+    #     if append?
+    #         puts "append"
+    #         puts contents if contents
+    #     else
+    #         puts "replace default"
+    #         puts contents if contents
+    #     end
+    # end
 
     # def copy_html
     #   copy_file_if_exists(
