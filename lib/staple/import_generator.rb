@@ -13,10 +13,12 @@ module Staple
         puts "style"
         if append?
             puts "append"
-            puts contents
+            file = File.join('styles', "#{component}", pattern_name)
+            puts file
         else
             puts "replace default"
-            puts contents
+            file = File.join('styles', "#{component}", pattern_name)
+            puts file
         end
     end
 
