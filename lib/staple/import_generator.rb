@@ -13,10 +13,10 @@ module Staple
         puts "style"
         if append?
             puts "append"
-            puts contents if contents
+            puts contents
         else
             puts "replace default"
-            puts contents if contents
+            puts contents
         end
     end
 
@@ -37,7 +37,7 @@ module Staple
     end
 
     def pattern_name
-      "_#{pattern.dasherize}.scss"
+      "#{pattern.dasherize}.scss"
     end
 
     def append?
