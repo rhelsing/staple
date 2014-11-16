@@ -8,9 +8,9 @@ module Staple
 
     def append_styles
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*append", "\n.#{component}.#{pattern}{\n\t#{contents}\n}//&*append" if contents
-        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*append", "\n.#{component}.\#{class}.#{pattern}{\n\t#{contents}\n}//&*append" if contents
+        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*append", "\n.#{component}.\#{$class}.#{pattern}{\n\t#{contents}\n}//&*append" if contents
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*append", "\n.#{component}.#{pattern}:hover{\n\t#{contents}\n}//&*append" if hover
-        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*append", "\n.#{component}.\#{class}.#{pattern}:hover{\n\t#{contents}\n}//&*append" if hover
+        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*append", "\n.#{component}.\#{$class}.#{pattern}:hover{\n\t#{contents}\n}//&*append" if hover
     end
 
     private
