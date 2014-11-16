@@ -7,14 +7,14 @@
   }
 }
 //BUTTON GENERATOR FOR EACH COLOR
-@each $color in $button-classes {
-	$i: index($button-classes, $color);
+@each $class in $button-classes {
+	$i: index($button-classes, $class);
 	$primary-color: nth($button-define, $i);
-	.button.#{$color}{
+	.button.#{$class}{
 		background-color: $primary-color;
 		color: set-text-color($primary-color);//&*default
 	}
-	.button.#{$color}:hover{
+	.button.#{$class}:hover{
 		background-color: lighten($primary-color, $transition-brighten);//&*hover
-	}
+	}//&*append
 }
