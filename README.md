@@ -27,6 +27,7 @@ High level UI framework. Built on top of foundation.
 * integration with existing projects
 * don't require other gems
 * reinstall places foundation again then does replace, seperate generator for update?
+* bring repeated generator code into mixin
 
 ##Install
 
