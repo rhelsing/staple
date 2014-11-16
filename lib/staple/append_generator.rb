@@ -10,7 +10,7 @@ module Staple
         puts "append"
         if contents
             #replace component
-            gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n.#{pattern_name}{\n#{contents}\n}//&*staple-append\n", "//&*staple-append"
+            gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*staple-append", "\n.#{pattern_name}{\n#{contents}\n}//&*staple-append\n"
             # gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n#{contents}//&*staple\n", "//&*staple"
         else
             puts "invalid operation"
