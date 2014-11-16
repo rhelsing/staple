@@ -9,8 +9,8 @@ module Staple
     def amputate_styles
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n.#{component.singularize}.#{pattern}{\n\t#{contents}\n}", "" if contents
         gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n.#{component.singularize}.\#{$class}.#{pattern}{\n\t#{contents}\n}", "" if contents
-        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n.#{component.singularize}.#{pattern}:hover{\n\t#{contents}\n}", "" if hover
-        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n.#{component.singularize}.\#{$class}.#{pattern}:hover{\n\t#{contents}\n}", "" if hover
+        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n.#{component.singularize}.#{pattern}:hover{\n\t#{hover}\n}", "" if hover
+        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n.#{component.singularize}.\#{$class}.#{pattern}:hover{\n\t#{hover}\n}", "" if hover
         puts "invalid operation. for available actions: rails g staple:list [option]" if !contents
     end
 

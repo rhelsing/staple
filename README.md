@@ -4,8 +4,6 @@ Modular UI framework for rails built on top of foundation and sass.
 
 ##todo
 
-* singular component/which?
-* amputate methods
 * plastic should be theme/template (includes) of other files
 
 ##lower priority todo
