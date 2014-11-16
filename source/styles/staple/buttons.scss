@@ -9,8 +9,8 @@
 }
 .button:hover{
 	background-color: lighten($primary-color, $transition-brighten);
-}
-//&*staple-append
+}//&*append
+
 //Variables determine what to generate to css
 //BUTTON CLASSES TO GENERATE: (look in colors)
 $button-classes: 		primary 		compliment 			secondary 			tertiary;

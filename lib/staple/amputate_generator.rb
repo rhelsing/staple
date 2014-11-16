@@ -10,7 +10,7 @@ module Staple
         puts "remove from default"
         if contents
             #replace component
-            gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n.#{pattern_name}{\n#{contents}\n}", ""
+            gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n.#{pattern}{\n#{contents}\n}", ""
             # gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n#{contents}\n", ""
         else
             puts "invalid operation"
