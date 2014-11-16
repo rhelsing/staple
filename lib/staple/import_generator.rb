@@ -7,29 +7,30 @@ module Staple
     argument :actions, :type => :array, :default => []
 
     def import_styles
-        puts "add to default"
-        if contents
-            #replace component
-            gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*staple", "\n\t#{contents}//&*staple"
-            gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*staple", "\n\t\t#{contents}//&*staple"
-        else
-            puts "invalid operation"
-        end
+        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*staple", "\n\t#{contents}//&*default" if contents
+        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*default", "\n\t\t#{contents}//&*default" if contents
+        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*hover", "\n\t#{hover}//&*hover" if hover
+        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*hover", "\n\t\t#{hover}//&*hover" if hover
     end
 
     private
 
     def contents
-        file = File.join(self.class.source_root, 'source', 'styles', "#{component}", pattern_name)
+        file = File.join(self.class.source_root, 'source', 'styles', "#{component}", "#{pattern.dasherize}.scss")
+        get_file(file)
+    end
+
+    def hover
+        file = File.join(self.class.source_root, 'source', 'styles', "#{component}", "#{pattern.dasherize}-hover.scss")
+        get_file(file)
+    end
+
+    def get_file(file)
         if File.file?(file)
             return File.read(file)
         else
             return false
         end
-    end
-
-    def pattern_name
-      "#{pattern.dasherize}.scss"
     end
 
     def component

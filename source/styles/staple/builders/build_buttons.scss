@@ -1,4 +1,4 @@
-//load functions before calling them. put in helpers
+//move to helpers
 @function set-text-color($color) {
   @if (lightness($color) > 60%) {
     @return rgba($black, $transparent-weak); // Lighter backgorund, return dark color
@@ -12,9 +12,9 @@
 	$primary-color: nth($button-define, $i);
 	.button.#{$color}{
 		background-color: $primary-color;
-		color: set-text-color($primary-color);//&*staple
+		color: set-text-color($primary-color);//&*default
 	}
 	.button.#{$color}:hover{
-		background-color: lighten($primary-color, $transition-brighten);
+		background-color: lighten($primary-color, $transition-brighten);//&*hover
 	}
 }

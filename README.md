@@ -13,7 +13,12 @@ Modular UI framework for rails built on top of foundation and sass.
 * integration with existing projects
 * reinstall places foundation again then does replace, separate generator for update?
 * bring repeated generator code into mixin
-* Set variables with generator: default radius, font, etc. (Which variables?)
+* Set variables with generator: default
+	* radius
+	* font
+	* primary-color
+	* border-size
+	* change ammount (color dif, hover dif)
 * create executables
 
 ##Install
