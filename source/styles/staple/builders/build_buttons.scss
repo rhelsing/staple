@@ -9,12 +9,12 @@
 //BUTTON GENERATOR FOR EACH COLOR
 @each $color in $button-classes {
 	$i: index($button-classes, $color);
-	$temp-color: nth($button-define, $i);
+	$primary-color: nth($button-define, $i);
 	.button.#{$color}{
-		background-color: $temp-color;
-		color: set-text-color($temp-color);//&*staple
+		background-color: $primary-color;
+		color: set-text-color($primary-color);//&*staple
 	}
 	.button.#{$color}:hover{
-		background-color: lighten($temp-color, $transition-brighten);
+		background-color: lighten($primary-color, $transition-brighten);
 	}
 }

@@ -19,7 +19,7 @@ High level UI framework. Built on top of foundation.
 
 ##TODO
 
-* Set variables with generator: default radius, font, etc
+* Set variables with generator: default radius, font, etc. (Which variables?)
 * Formalize process
 
 ##LOW PRIORITY
