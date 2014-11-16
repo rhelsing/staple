@@ -5,12 +5,12 @@
 	color: set-text-color($primary-color);
 	font-weight: 200;
  	letter-spacing: 1px;
- 	transition: background-color 150ms ease-out;
- 	//DO NOT MODIFY THIS (Needed for import to work) :%>>
+ 	transition: background-color 150ms ease-out;//&*staple
 }
 .button:hover{
 	background-color: lighten($primary-color, $transition-brighten);
 }
+//&*staple-append
 //Variables determine what to generate to css
 //BUTTON CLASSES TO GENERATE: (look in colors)
 $button-classes: 		primary 		compliment 			secondary 			tertiary;

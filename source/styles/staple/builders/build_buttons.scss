@@ -12,8 +12,7 @@
 	$temp-color: nth($button-define, $i);
 	.button.#{$color}{
 		background-color: $temp-color;
-		color: set-text-color($temp-color);
-		//DO NOT MODIFY THIS (Needed for import to work) :%>>
+		color: set-text-color($temp-color);//&*staple
 	}
 	.button.#{$color}:hover{
 		background-color: lighten($temp-color, $transition-brighten);

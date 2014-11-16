@@ -1,17 +1,17 @@
 require 'rails/generators'
 
 module Staple
-  class ImportGenerator < Rails::Generators::Base
-    desc 'bring in the staple'
+  class AppendGenerator < Rails::Generators::Base
+    desc 'append the staple'
     source_root File.join(File.dirname(__FILE__), '..', '..')
     argument :actions, :type => :array, :default => []
 
-    def import_styles
-        puts "add to default"
+    def append_styles
+        puts "append"
         if contents
             #replace component
-            gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n#{contents}//&*staple\n", "//&*staple"
-            gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n#{contents}//&*staple\n", "//&*staple"
+            gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n.#{pattern_name}{\n#{contents}\n}//&*staple-append\n", "//&*staple-append"
+            # gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n#{contents}//&*staple\n", "//&*staple"
         else
             puts "invalid operation"
         end
