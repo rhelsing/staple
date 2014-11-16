@@ -7,7 +7,7 @@ module Staple
     argument :actions, :type => :array, :default => []
 
     def import_styles
-        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*staple", "\n\t#{contents}//&*default" if contents
+        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*default", "\n\t#{contents}//&*default" if contents
         gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*default", "\n\t\t#{contents}//&*default" if contents
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*hover", "\n\t#{hover}//&*hover" if hover
         gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*hover", "\n\t\t#{hover}//&*hover" if hover

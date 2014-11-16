@@ -8,30 +8,31 @@ module Staple
 
     def import_styles
         puts "remove from default"
-        if contents
-            #replace component
-            gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{contents}", ""
-            gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n\t\t#{contents}", ""
-        else
-            puts "invalid operation"
-        end
+        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{contents}", "" if contents
+        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n\t\t#{contents}", "" if contents
+        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{hover}", "" if hover
+        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n\t\t#{hover}", "" if hover
     end
 
     private
 
     def contents
-        file = File.join(self.class.source_root, 'source', 'styles', "#{component}", pattern_name)
+        file = File.join(self.class.source_root, 'source', 'styles', "#{component}", "#{pattern.dasherize}.scss")
+        get_file(file)
+    end
+
+    def hover
+        file = File.join(self.class.source_root, 'source', 'styles', "#{component}", "#{pattern.dasherize}-hover.scss")
+        get_file(file)
+    end
+
+    def get_file(file)
         if File.file?(file)
             return File.read(file)
         else
             return false
         end
     end
-
-    def pattern_name
-      "#{pattern.dasherize}.scss"
-    end
-
     def component
         actions[0]
     end
