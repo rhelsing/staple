@@ -4,7 +4,7 @@ Modular UI framework for rails built on top of foundation and sass.
 
 ##todo
 
-* plastic should be theme/template (includes) of other files
+* plastic should be theme/template: seperate generator?
 
 ##lower priority todo
 * declaring as dependency does not load it? vs don't require other gems
