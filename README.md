@@ -4,7 +4,10 @@ Modular UI framework for rails built on top of foundation and sass.
 
 ##todo
 
-* plastic should be theme/template: seperate generator?
+* plastic should be theme/template: seperate generator? yes.
+	* theme folder in buttons? begin with underscore for theme?
+	* seperate generator? Yes. will call lower level generators in order specified
+	* theme generator will call each component generator
 
 ##lower priority todo
 * declaring as dependency does not load it? vs don't require other gems
