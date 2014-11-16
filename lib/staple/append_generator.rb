@@ -7,10 +7,11 @@ module Staple
     argument :actions, :type => :array, :default => []
 
     def append_styles
-        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*append", "\n.#{component}.#{pattern}{\n\t#{contents}\n}//&*append" if contents
-        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*append", "\n.#{component}.\#{$class}.#{pattern}{\n\t#{contents}\n}//&*append" if contents
-        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*append", "\n.#{component}.#{pattern}:hover{\n\t#{contents}\n}//&*append" if hover
-        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*append", "\n.#{component}.\#{$class}.#{pattern}:hover{\n\t#{contents}\n}//&*append" if hover
+        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*append", "\n.#{component.singularize}.#{pattern}{\n\t#{contents}\n}//&*append" if contents
+        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*append", "\n.#{component.singularize}.\#{$class}.#{pattern}{\n\t#{contents}\n}//&*append" if contents
+        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*append", "\n.#{component.singularize}.#{pattern}:hover{\n\t#{contents}\n}//&*append" if hover
+        gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*append", "\n.#{component.singularize}.\#{$class}.#{pattern}:hover{\n\t#{contents}\n}//&*append" if hover
+        puts "invalid operation. for available actions: rails g staple:list [option]" if !contents
     end
 
     private

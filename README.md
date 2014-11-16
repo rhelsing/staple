@@ -4,8 +4,8 @@ Modular UI framework for rails built on top of foundation and sass.
 
 ##todo
 
-* handle hovers (check if hover file is included? etc)
-* handle various css-foreach components (rename color to component on buttons?)
+* singular component/which?
+* amputate methods
 * plastic should be theme/template (includes) of other files
 
 ##lower priority todo
