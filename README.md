@@ -1,34 +1,20 @@
-#Staple - COMING SOON
+#staple
 
-High level UI framework. Built on top of foundation.
+Modular UI framework for rails built on top of foundation and sass.
 
-#STRATEGY
-
-##Main
-* Overrides
-* Default Styles
-* Additional Styles
-* Generate
-
-##Import
-* Override defaults
-* Add additional
-	* Styles
-	* Type of generators
-* Components - inherit default styles
-
-##TODO
+##todo
 
 * handle hovers (check if hover file is included? etc)
 * handle various css-foreach components (rename color to component on buttons?)
 * plastic should be theme/template (includes) of other files
 
-##LOW PRIORITY
+##lower priority todo
 * declaring as dependency does not load it? vs don't require other gems
 * integration with existing projects
-* reinstall places foundation again then does replace, seperate generator for update?
+* reinstall places foundation again then does replace, separate generator for update?
 * bring repeated generator code into mixin
 * Set variables with generator: default radius, font, etc. (Which variables?)
+* create executables
 
 ##Install
 
@@ -47,48 +33,11 @@ spring stop
 rails g staple:install
 ```
 
-##Simple, Universal Markup
-```slim
-section.row
-	nav.columns.small-3
-		ul.side-nav
-		  li
-		    a href="#"  Link 1
-		  li
-		    a href="#"  Link 2
-	article.columns.small-9
-		h1 Article title
-		h5.subheader Subheader
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-```
+#how to use
 
-##Modify Overall, Modular Style With Commands
-```console
-staple theme:flat
-```
+rails g staple:{import|remove||append|amputate} buttons round
 
-```console
-staple type-face-primary:HelveticaNeau
-```
-
-```console
-staple type-face-secondary:ComicSans
-```
-
-```console
-staple color-scheme:Flatland
-```
-
+#staple command
 staple {button-style|button-theme} {pattern} (append)
 staple buttons round
 staple buttons-theme plastic
-
-rails g staple:import buttons round append
-
-if append, add content from appropriate file
-if not append, replace default with content
-
-##Build
-
-gem build staple.gemspec
-gem push staple-0.0.1.gem
