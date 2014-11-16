@@ -10,8 +10,8 @@ module Staple
         puts "add to default"
         if contents
             #replace component
-            gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*staple", "\n#{contents}//&*staple"
-            gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*staple", "\n#{contents}//&*staple"
+            gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*staple", "\n\t#{contents}//&*staple"
+            gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*staple", "\n\t\t#{contents}//&*staple"
         else
             puts "invalid operation"
         end
