@@ -19,15 +19,16 @@ High level UI framework. Built on top of foundation.
 
 ##TODO
 
-* Set variables with generator: default radius, font, etc. (Which variables?)
-* Formalize process
+* handle hovers (check if hover file is included? etc)
+* handle various css-foreach components (rename color to component on buttons?)
+* plastic should be theme/template (includes) of other files
 
 ##LOW PRIORITY
-* declaring as dependency does not load it?
+* declaring as dependency does not load it? vs don't require other gems
 * integration with existing projects
-* don't require other gems
 * reinstall places foundation again then does replace, seperate generator for update?
 * bring repeated generator code into mixin
+* Set variables with generator: default radius, font, etc. (Which variables?)
 
 ##Install
 
