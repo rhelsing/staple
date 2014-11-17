@@ -1,13 +1,11 @@
 #staple
 
-Modular UI framework for rails built on top of foundation and sass.
+a modular ui framework for rails built on top of foundation and sass.
 
 ##todo
 
-* plastic should be theme/template: seperate generator? yes.
-	* theme folder in buttons? begin with underscore for theme?
-	* seperate generator? Yes. will call lower level generators in order specified
-	* theme generator will call each component generator
+* placement of triggers
+* create patterns and themes
 
 ##lower priority todo
 * declaring as dependency does not load it? vs don't require other gems
@@ -21,6 +19,7 @@ Modular UI framework for rails built on top of foundation and sass.
 	* border-size
 	* change ammount (color dif, hover dif)
 * create executables
+* Demarcate each pattern (atom) with comment
 
 ##Install
 
