@@ -9,9 +9,11 @@ module Staple
     def call_generators
         if global?
             #call self with each
-            puts "all"
+            components = %w(buttons colors forms sizes tables typography)
+            components.each do |c|
+                generate "staple:theme", "#{c}", "#{theme}"
+            end
         else
-            puts "component"
             if theme_definition
                 patterns = theme_definition.split("\n")
                 patterns.each do |pattern|
