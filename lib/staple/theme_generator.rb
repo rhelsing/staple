@@ -1,7 +1,7 @@
 require 'rails/generators'
 
 module Staple
-  class ImportGenerator < Rails::Generators::Base
+  class ThemeGenerator < Rails::Generators::Base
     desc 'bring in the staple'
     source_root File.join(File.dirname(__FILE__), '..', '..')
     argument :actions, :type => :array, :default => []
