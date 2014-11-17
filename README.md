@@ -6,13 +6,16 @@ a modular ui framework for rails built on top of foundation and sass.
 
 * placement of triggers
 * create patterns and themes
+* default form and builders
+* color schemes, typography -> *special case
+* hover -> alternate_state
+* swap out themes / place theme label and deconstruct before placing next theme
 
 ##lower priority todo
-* declaring as dependency does not load it? vs don't require other gems
+* don't require other gems
 * integration with existing projects
 * reinstall places foundation again then does replace, separate generator for update?
-* bring repeated generator code into mixin
-* Set variables with generator: default
+* variables generator:
 	* radius
 	* font
 	* primary-color

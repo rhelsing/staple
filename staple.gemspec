@@ -5,8 +5,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name          = "staple"
   spec.version       = "0.3.0"
-  spec.summary       = "Modular UI framework for rails built on top of foundation and sass."
-  spec.description   = "Modular UI framework for rails built on top of foundation and sass."
+  spec.summary       = "Modular UI framework for rails built on top of foundation and sass"
+  spec.description   = "a modular ui framework for rails built on top of foundation and sass."
   spec.authors       = ["Ryan Helsing"]
   spec.email         = ["ryan.helsing@centerian.com"]
   spec.homepage      = "https://github.com/rhelsing/staple"
