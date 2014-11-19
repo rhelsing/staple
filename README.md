@@ -47,6 +47,8 @@ rails g staple:install
 
 ##intended use
 
+* special cases - seperate generators?
+
 ###themes
 * rails g staple:theme buttons plastic
 * rails g staple:theme colors flatland // see flatland.theme
@@ -65,12 +67,12 @@ rails g staple:install
 * rails g staple:append forms inverse
 * rails g staple:amputate forms inverse
 
-###colors* //set default and append? like others
+###colors*
 * rails g staple:import colors secondary:blue
 * rails g staple:append colors fave:aqua //adds new color and generate class: button, accent?
 * rails g staple:remove colors fave // removes color declaration
 
-###typography* //set default and append? like others
+###typography*
 * rails g staple:import typography typeface-primary:Roboto
 * rails g staple:remove typography typeface-primary:Roboto
 * rails g staple:append typography cool-typeface:Roboto //create var and generate
