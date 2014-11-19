@@ -10,6 +10,7 @@ a modular ui framework for rails built on top of foundation and sass.
 
 ##todo
 
+* does special case generators or component based generators make more sense from high level perspective?
 * default form and builders
 * hover -> alternate_state
 * swap out themes / place theme label and deconstruction before placing next theme
