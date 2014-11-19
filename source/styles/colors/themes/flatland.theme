@@ -1,0 +1,5 @@
+secondary:green
+tertiary:yellow
+background:rgba(25,228,20,0.5) //set more vars than just primary
+primary:#477
+paragraph:red//if available, import file, else, use explicit declaration
