@@ -2,6 +2,11 @@
 
 a modular ui framework for rails built on top of foundation and sass.
 
+##goals
+
+* favor presets over explicit declaration
+* convention over configuration
+
 ##todo
 
 * placement of triggers
@@ -9,7 +14,7 @@ a modular ui framework for rails built on top of foundation and sass.
 * default form and builders
 * color schemes, typography -> *special case
 * hover -> alternate_state
-* swap out themes / place theme label and deconstruct before placing next theme
+* swap out themes / place theme label and deconstruction before placing next theme
 
 ##lower priority todo
 * don't require other gems
@@ -20,7 +25,7 @@ a modular ui framework for rails built on top of foundation and sass.
 	* font
 	* primary-color
 	* border-size
-	* change ammount (color dif, hover dif)
+	* change amount (color dif, hover dif)
 * create executables
 * Demarcate each pattern (atom) with comment
 
