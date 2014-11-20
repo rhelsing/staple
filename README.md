@@ -11,7 +11,7 @@ a modular ui framework for rails built on top of foundation and sass.
 ##todo
 
 * component based generators
-* default form and builders
+* fix plastic, flat theme selectors. Focus color.
 * hover -> alternate_state
 * swap out themes / place theme label and deconstruction before placing next theme
 
