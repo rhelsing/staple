@@ -15,9 +15,10 @@ module Staple
             end
         else
             if theme_definition
-                if yes? "Any changes you have made to staple/#{component}.scss will be overwritten. Continue? (Y/N)"
-                    #tear down previous styles.
+                if yes? "Any changes you have made to staple/#{component}.scss or builders will be overwritten. Continue? (Y/N)"
+                    #tear down previous styles. hack: if they exist!
                     copy_file "source/styles/staple/#{component}.scss", "app/assets/stylesheets/staple/#{component}.scss", :force => true
+                    copy_file "source/styles/staple/builders/build_#{component}.scss", "app/assets/stylesheets/staple/builders/build_#{component}.scss", :force => true
                     patterns = theme_definition.split("\n")
                     patterns.each do |pattern|
                         generate "staple:#{component}", "import", "#{pattern}"
