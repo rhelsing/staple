@@ -17,7 +17,7 @@ module Staple
             if theme_definition
                 patterns = theme_definition.split("\n")
                 patterns.each do |pattern|
-                    generate "staple:import", "#{component}", "#{pattern}"
+                    generate "staple:#{component}", "import", "#{pattern}"
                 end
             end
         end

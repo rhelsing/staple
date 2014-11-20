@@ -27,7 +27,9 @@ a modular ui framework for rails built on top of foundation and sass.
 	* change amount (color dif, hover dif)
 * create executables
 * Demarcate each pattern (atom) with comment
-* Handle import > modify > remove cycle. Explicit modification.
+* Handle import > modify > remove cycle. Explicit modification will mess up generators (remove/amp).
+	* Tear down to base on new theme? ask if overrite?
+* Make errors verbose. Print full command on low level.
 
 ##Install
 
@@ -63,32 +65,32 @@ rails g staple:install
 * rails g staple:buttons amputate gradient
 
 ###forms
-* rails g staple:import forms inner-shadow
-* rails g staple:remove forms inner-shadow
-* rails g staple:append forms inverse
-* rails g staple:amputate forms inverse
+* rails g staple:forms import inner-shadow
+* rails g staple:forms remove inner-shadow
+* rails g staple:forms append inverse
+* rails g staple:forms amputate inverse
 
 ###colors*
-* rails g staple:import colors secondary:blue
-* rails g staple:append colors fave:aqua //adds new color and generate class: button, accent?
-* rails g staple:remove colors fave // removes color declaration
+* rails g staple:colors import secondary:blue
+* rails g staple:colors append fave:aqua //adds new color and generate class: button, accent?
+* rails g staple:colors remove fave // removes color declaration
 
 ###typography*
-* rails g staple:import typography typeface-primary:Roboto
-* rails g staple:remove typography typeface-primary:Roboto
-* rails g staple:append typography cool-typeface:Roboto //create var and generate
+* rails g staple:typography import typeface-primary:Roboto
+* rails g staple:typography remove typeface-primary:Roboto
+* rails g staple:typography append cool-typeface:Roboto //create var and generate
 
 ###tables
-* rails g staple:import tables borders
-* rails g staple:remove tables zebra-stripe
-* rails g staple:append tables inverse
-* rails g staple:amputate tables small
+* rails g staple:tables import borders
+* rails g staple:tables remove zebra-stripe
+* rails g staple:tables append inverse
+* rails g staple:tables amputate small
 
 ###sizes
-* rails g staple:import sizes big
-* rails g staple:remove sizes medium
-* rails g staple:append sizes xl
-* rails g staple:amputate sizes xxl
+* rails g staple:sizes import big
+* rails g staple:sizes remove medium
+* rails g staple:sizes append xl
+* rails g staple:sizes amputate xxl
 
 #staple command - coming soon
 staple {button-style|button-theme} {pattern} (append)
