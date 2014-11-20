@@ -1,0 +1,36 @@
+div.error{
+	*{
+		background: lighten($alert-color, 40%);
+		border: 2px solid lighten($alert-color, 40%);
+		border-top: 2px solid $alert-color;
+	}
+	*:focus{
+		background: white;
+		border-color: 2px solid $alert-color;
+	}
+}
+small.error{
+	padding: 3px 0px 3px -30px;
+	margin-bottom: 1rem;
+	font-size: 0.75rem;
+	font-weight: normal;
+	border-radius: $global-radius;
+	font-weight: 200;
+
+	border: 1px solid $alert-color, 6%;
+	border-bottom: 4px solid darken($alert-color, 6%);
+	box-shadow: 0 -1px 0 rgba(255,255,255,0.05) inset;
+    -moz-box-shadow: 0 -1px 0 rgba(255,255,255,0.05) inset;
+    -webkit-box-shadow: 0 -1px 0 rgba(255,255,255,0.05) inset;
+}
+small.error:before{
+	position: relative;
+	display: inline-block;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid $alert-color;
+	left: 2px;
+	top: -19px;
+	margin-right:-14px;
+	content: '';
+}
