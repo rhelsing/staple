@@ -7,11 +7,17 @@ module Staple
     argument :actions, :type => :array, :default => []
 
     def delegate
-        if "#{action}" == "import"
+        case "#{action}"
+        when "import"
             import
-            puts "import"
+        when "remove"
+            remove
+        when "append"
+            append
+        when "amputate"
+            amputate
         else
-            puts "nothing"
+            puts "unknown command"
         end
     end
 
