@@ -63,7 +63,7 @@ module Staple
     end
 
     def not_valid?
-        !contents || !focus || !error
+        !contents && !focus && !error
     end
 
     #DEFINE

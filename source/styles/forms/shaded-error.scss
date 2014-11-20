@@ -1,9 +1,9 @@
 div.error{
-	*{
+	input{
 		background-color: lighten($alert-color, 40%);
 		border-color: lighten($alert-color, 40%);
 	}
-	*:focus{
+	input:focus{
 		background: white;
 		border-color: $alert-color;
 	}
