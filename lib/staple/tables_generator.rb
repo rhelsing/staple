@@ -25,7 +25,7 @@ module Staple
         puts "#{component} import #{pattern}"
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*default", "\n\t#{contents}//&*default" if contents
 
-        puts "invalid operation: #{component} import #{pattern}. for available actions: rails g staple:list [option]" if not_valid?
+        puts "invalid operation: #{component} import #{pattern}. for available actions: rails g staple:list [option]" if !contents
     end
 
     def remove
@@ -46,10 +46,6 @@ module Staple
         else
             return false
         end
-    end
-
-    def not_valid
-        !contents
     end
 
     #DEFINE
