@@ -26,6 +26,7 @@ module Staple
         if File.readlines(filename).any?{ |l| l["$#{variable}:"] }
             #replace line w/ new
             gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{contents};") if contents
+            gsub_file(filename, "//&*import", "\n#{import}//&*import") if import
             gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{typeface};") if !contents
         else
             #create variable w/color
@@ -38,12 +39,18 @@ module Staple
     def remove
         #check for variable, and remove line
         gsub_file(filename, /\$#{variable}:.*$/, "")
+        gsub_file(filename, "\n#{import}", "") if import
     end
 
     #HELPER METHODS
 
     def contents
         file = File.join(self.class.source_root, 'source', 'styles', "#{component}", "#{typeface.dasherize}.typeface")
+        get_file(file)
+    end
+
+    def import_type
+        file = File.join(self.class.source_root, 'source', 'styles', "#{component}", "#{typeface.dasherize}-import.scss")
         get_file(file)
     end
 
