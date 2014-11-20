@@ -31,6 +31,7 @@ a modular ui framework for rails built on top of foundation and sass.
 * Demarcate each pattern in scss (atom) with comment
 * Make errors verbose. Print full command on low level.
 * make variable filename for generators
+* add colors to accent, buttons? gen?
 
 ##Install
 
@@ -74,6 +75,7 @@ rails g staple:install
 ###colors*
 * rails g staple:colors import primary:blue//adds if doesn't exist
 * rails g staple:colors remove fave // removes color declaration
+* rails g staple:colors import primary-color:'rgba(22,23,0,0.9)' //explicit declaration
 
 ###typography*
 * rails g staple:typography import typeface-primary:Roboto
