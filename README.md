@@ -10,8 +10,12 @@ a modular ui framework for rails built on top of foundation and sass.
 
 ##todo
 
-* component based generators
-* fix plastic, flat theme selectors. Focus color.
+* component based generators:
+	* colors
+	* typography
+	* tables
+	* sizes
+* fix plastic (Focus color), flat theme selectors.
 
 ##lower priority todo
 * don't require other gems
@@ -67,8 +71,7 @@ rails g staple:install
 * rails g staple:forms amputate inverse
 
 ###colors*
-* rails g staple:colors import secondary:blue
-* rails g staple:colors append fave:aqua //adds new color and generate class: button, accent?
+* rails g staple:colors import primary:blue//adds if doesn't exist
 * rails g staple:colors remove fave // removes color declaration
 
 ###typography*
