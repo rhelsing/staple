@@ -4,10 +4,10 @@ module Staple
   class ButtonsGenerator < Rails::Generators::Base
     desc 'pending'
     source_root File.join(File.dirname(__FILE__), '..', '..')
-    argument :args, :type => :array, :default => []
+    argument :actions, :type => :array, :default => []
 
     def delegate
-        if action == "import"
+        if "#{action}" == "import"
             import
             puts "import"
         else
@@ -72,11 +72,11 @@ module Staple
     end
 
     def action
-        args[0]
+        actions[0]
     end
 
     def pattern
-        args[1]
+        actions[1]
     end
 
     def component
