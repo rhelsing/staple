@@ -11,10 +11,9 @@ a modular ui framework for rails built on top of foundation and sass.
 ##todo
 
 * component based generators:
-	* colors
-	* typography
 	* tables
 	* sizes
+* refactor generator code from low priority
 * fix plastic (Focus color), flat theme selectors.
 
 ##lower priority todo
@@ -34,6 +33,10 @@ a modular ui framework for rails built on top of foundation and sass.
 * add colors to accent, buttons? gen?
 * seperate if file contains into method.
 * check before import if already there
+* integrate:
+	* background, paragraph, etc vars
+	* append into generators
+	* generator for form colors from button list
 
 ##Install
 
