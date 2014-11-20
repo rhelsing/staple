@@ -7,7 +7,15 @@ module Staple
     argument :args, :type => :array, :default => []
 
     def delegate
-        case action; when "import"; import; when "remove"; remove; when "append"; append; when "amputate"; amputate; else puts "Unknown Command";end
+        case action
+        when "import"
+            puts "import"
+            import
+        when "remove"
+            remove
+        else
+            puts "none"
+        end
     end
 
     private
