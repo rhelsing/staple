@@ -25,8 +25,8 @@ module Staple
         puts "#{component} import #{variable} -> #{color}"
         if File.readlines(filename).any?{ |l| l["$#{variable}:"] }
             #replace line w/ new
-            gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{contents}") if contents
-            gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{color}") if !contents
+            gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{contents};") if contents
+            gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{color};") if !contents
         else
             #create variable w/color
             gsub_file(filename, "//&*append", "\n$#{variable}: #{contents};//&*append") if contents
