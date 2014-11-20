@@ -26,9 +26,7 @@ a modular ui framework for rails built on top of foundation and sass.
 	* border-size
 	* change amount (color dif, hover dif)
 * create executables
-* Demarcate each pattern (atom) with comment
-* Handle import > modify > remove cycle. Explicit modification will mess up generators (remove/amp).
-	* Tear down to base on new theme? ask if overrite?
+* Demarcate each pattern in scss (atom) with comment
 * Make errors verbose. Print full command on low level.
 
 ##Install
