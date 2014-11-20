@@ -15,9 +15,12 @@ module Staple
             end
         else
             if theme_definition
-                patterns = theme_definition.split("\n")
-                patterns.each do |pattern|
-                    generate "staple:#{component}", "import", "#{pattern}"
+                if yes? "Replace the current style for #{component}? Any changes you have made to #{component} will be overwritten."
+                    patterns = theme_definition.split("\n")
+                    patterns.each do |pattern|
+                        #tear down previous styles. Set to default.
+                        generate "staple:#{component}", "import", "#{pattern}"
+                    end
                 end
             end
         end
