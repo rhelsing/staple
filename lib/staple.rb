@@ -1,4 +1,4 @@
-require 'staple/import_generator'
+require 'staple/buttons_generator'
 require 'staple/append_generator'
 require 'staple/remove_generator'
 require 'staple/amputate_generator'
