@@ -23,7 +23,7 @@ module Staple
 
     def import
         puts "#{component} import #{variable} -> #{color}"
-        if File.readlines("app/assets/stylesheets/staple/#{component}.scss").any?{ |l| l['primary-color'] }
+        if File.readlines("app/assets/stylesheets/staple/#{component}.scss").any?{ |l| l["#{variable}"] }
             puts "exists"
         else
             puts "not in there"
@@ -61,7 +61,7 @@ module Staple
     end
 
     def variable
-        "#{actions[1].split(":").first}"
+        actions[1].split(":").first
     end
 
     def color
