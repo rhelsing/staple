@@ -23,20 +23,22 @@ module Staple
 
     def import
         puts "#{component} import #{variable} -> #{color}"
-
-
-        #puts "invalid operation: #{component} import #{pattern}. for available actions: rails g staple:list [option]" if not_valid?
+        if File.readlines("app/assets/stylesheets/staple/#{component}.scss").grep(/variable/).any?
+            puts "exists"
+        else
+            puts "not in there"
+        end
+        #check for variable, if yes: replace line, if no, create
     end
 
     def remove
-        puts "#{component} remove #{pattern}"
-
+        #check for variable, and remove line
     end
 
     #HELPER METHODS
 
     def contents
-        file = File.join(self.class.source_root, 'source', 'styles', "#{component}", "#{pattern.dasherize}.scss")
+        file = File.join(self.class.source_root, 'source', 'styles', "#{component}", "#{color.dasherize}.color")
         get_file(file)
     end
 
@@ -59,7 +61,7 @@ module Staple
     end
 
     def variable
-        actions[1].split(":").first
+        "#{actions[1].split(":").first}"
     end
 
     def color
