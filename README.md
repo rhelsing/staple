@@ -9,7 +9,6 @@ a modular ui framework for rails built on top of foundation and sass.
 * keep it simple
 
 ##todo
-* fix plastic (Focus color), flat theme selectors.
 * expand library and integration tests
 * import web components
 
