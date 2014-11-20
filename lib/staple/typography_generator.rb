@@ -26,7 +26,7 @@ module Staple
         if File.readlines(filename).any?{ |l| l["$#{variable}:"] }
             #replace line w/ new
             gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{contents};") if contents
-            gsub_file(filename, "//&*import_type", "\n#{import}//&*import") if import_type
+            gsub_file(filename, "//&*import_type", "\n#{import_type}//&*import") if import_type
             gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{typeface};") if !contents
         else
             #create variable w/color
