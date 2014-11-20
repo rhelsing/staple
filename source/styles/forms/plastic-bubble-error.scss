@@ -1,10 +1,10 @@
 div.error{
-	*{
+	input{
 		background: lighten($alert-color, 40%);
 		border: 2px solid lighten($alert-color, 40%);
 		border-top: 2px solid $alert-color;
 	}
-	*:focus{
+	input:focus{
 		background: white;
 		border-color: 2px solid $alert-color;
 	}

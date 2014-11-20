@@ -9,8 +9,9 @@ a modular ui framework for rails built on top of foundation and sass.
 * keep it simple
 
 ##todo
-* refactor generator code from low priority
 * fix plastic (Focus color), flat theme selectors.
+* expand library and integration tests
+* import web components
 
 ##lower priority todo
 * don't require other gems
@@ -31,7 +32,7 @@ a modular ui framework for rails built on top of foundation and sass.
 	* primary-color
 	* border-size
 	* change amount (color dif, hover dif)
-* Reset method
+* refactor generator code from low priority
 
 ##Install
 
