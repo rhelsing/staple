@@ -23,6 +23,8 @@ module Staple
 
     private
 
+    #ACTIONS
+
     def import
         puts "import"
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*default", "\n\t#{contents}//&*default" if contents
@@ -59,6 +61,8 @@ module Staple
         puts "invalid operation. for available actions: rails g staple:list [option]" if !contents
     end
 
+    #HELPER METHODS
+
     def contents
         file = File.join(self.class.source_root, 'source', 'styles', "#{component}", "#{pattern.dasherize}.scss")
         get_file(file)
@@ -76,6 +80,8 @@ module Staple
             return false
         end
     end
+
+    #DEFINE
 
     def action
         actions[0]
