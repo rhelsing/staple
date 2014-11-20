@@ -15,10 +15,11 @@ module Staple
             end
         else
             if theme_definition
-                if yes? "Replace the current style for #{component}? Any changes you have made to #{component} will be overwritten."
+                if yes? "Replace the current style for #{component}? Any changes you have made to #{component} will be overwritten. (Y/N)"
+                    #tear down previous styles.
+                    copy_file "source/styles/staple/#{component}.scss", "app/assets/stylesheets/staple/#{component}.scss", :force => true
                     patterns = theme_definition.split("\n")
                     patterns.each do |pattern|
-                        #tear down previous styles. Set to default.
                         generate "staple:#{component}", "import", "#{pattern}"
                     end
                 end
