@@ -81,7 +81,7 @@ module Staple
     end
 
     def component
-        "colors"
+        "typography"
     end
 
   end
