@@ -22,7 +22,7 @@ module Staple
     #ACTIONS
 
     def import
-        puts "#{component} import #{variable} -> #{color}"
+        puts "#{component} import #{variable} -> #{typeface}"
         if File.readlines(filename).any?{ |l| l["$#{variable}:"] }
             #replace line w/ new
             gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{contents};") if contents
