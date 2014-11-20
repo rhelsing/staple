@@ -10,7 +10,7 @@ a modular ui framework for rails built on top of foundation and sass.
 
 ##todo
 
-* does special case generators or component based generators make more sense from high level perspective?
+* component based generators
 * default form and builders
 * hover -> alternate_state
 * swap out themes / place theme label and deconstruction before placing next theme
@@ -57,10 +57,10 @@ rails g staple:install
 * rails g staple:theme typography plastic // see flatland.theme
 
 ###buttons
-* rails g staple:import buttons shadow
-* rails g staple:remove buttons shadow
-* rails g staple:append buttons gradient
-* rails g staple:amputate buttons gradient
+* rails g staple:buttons import shadow
+* rails g staple:buttons remove shadow
+* rails g staple:buttons append gradient
+* rails g staple:buttons amputate gradient
 
 ###forms
 * rails g staple:import forms inner-shadow
