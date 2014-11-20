@@ -1,5 +1,5 @@
 typeface-primary:roboto
 typeface-secondary:'"Inconsolata", monospace'
 typeface-tertiary:helvetica-neue
-normal-font-weight:400
-header-font-weight:300
+normal-font-weight:200
+header-font-weight:600

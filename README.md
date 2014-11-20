@@ -32,6 +32,8 @@ a modular ui framework for rails built on top of foundation and sass.
 * Make errors verbose. Print full command on low level.
 * make variable filename for generators
 * add colors to accent, buttons? gen?
+* seperate if file contains into method.
+* check before import if already there
 
 ##Install
 
