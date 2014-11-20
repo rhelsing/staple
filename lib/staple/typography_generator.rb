@@ -1,7 +1,7 @@
 require 'rails/generators'
 
 module Staple
-  class ColorsGenerator < Rails::Generators::Base
+  class TypographyGenerator < Rails::Generators::Base
     desc 'pending'
     source_root File.join(File.dirname(__FILE__), '..', '..')
     argument :actions, :type => :array, :default => []
@@ -26,11 +26,11 @@ module Staple
         if File.readlines(filename).any?{ |l| l["$#{variable}:"] }
             #replace line w/ new
             gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{contents};") if contents
-            gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{color};") if !contents
+            gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{typeface};") if !contents
         else
             #create variable w/color
             gsub_file(filename, "//&*append", "$#{variable}: #{contents};\n//&*append") if contents
-            gsub_file(filename, "//&*append", "$#{variable}: #{color};\n//&*append") if !contents
+            gsub_file(filename, "//&*append", "$#{variable}: #{typeface};\n//&*append") if !contents
         end
         #check for variable, if yes: replace line, if no, create
     end
@@ -43,7 +43,7 @@ module Staple
     #HELPER METHODS
 
     def contents
-        file = File.join(self.class.source_root, 'source', 'styles', "#{component}", "#{color.dasherize}.color")
+        file = File.join(self.class.source_root, 'source', 'styles', "#{component}", "#{typeface.dasherize}.typeface")
         get_file(file)
     end
 
@@ -59,10 +59,6 @@ module Staple
         "app/assets/stylesheets/staple/#{component}.scss"
     end
 
-    def not_valid
-        !contents
-    end
-
     #DEFINE
 
     def action
@@ -73,7 +69,7 @@ module Staple
         actions[1].split(":").first
     end
 
-    def color
+    def typeface
         actions[1].split(":").last
     end
 

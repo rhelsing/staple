@@ -1,7 +1,7 @@
 //IMPORT FONTS HERE Typekit and Google Fonts
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);//&*import
 
 //DEFAULTS
 $typeface-primary: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9,7 +9,7 @@ $typeface-secondary: "Roboto Slab", serif;
 $typeface-tertiary: "Inconsolata", monospace;
 $normal-font-weight: 400;
 $header-font-weight: 300;
-$subheader-font-weight: 400;
+$subheader-font-weight: 400;//&*append
 
 //FOUNDATION STYLES: CAN BE OVERRIDDEN BUT NEEDED
 $font-family-sans-serif: $typeface-primary;
