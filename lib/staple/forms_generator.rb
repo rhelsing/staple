@@ -22,17 +22,17 @@ module Staple
     #ACTIONS
 
     def import
-        puts "import"
+        puts "#{component} import #{pattern}"
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*default", "\n\t#{contents}//&*default" if contents
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*focus", "\n\t#{focus}//&*focus" if focus
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*error", "\n\t#{error}//&*error" if error
 
 
-        puts "invalid operation. for available actions: rails g staple:list [option]" if !contents
+        puts "invalid operation: #{component} import #{pattern}. for available actions: rails g staple:list [option]" if !contents
     end
 
     def remove
-        puts "remove"
+        puts "#{component} remove #{pattern}"
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{contents}", "" if contents
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{focus}", "" if focus
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{error}", "" if error

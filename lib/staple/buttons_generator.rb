@@ -26,16 +26,16 @@ module Staple
     #ACTIONS
 
     def import
-        puts "import"
+        puts "#{component} import #{pattern}"
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*default", "\n\t#{contents}//&*default" if contents
         gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*default", "\n\t\t#{contents}//&*default" if contents
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "//&*hover", "\n\t#{hover}//&*hover" if hover
         gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "//&*hover", "\n\t\t#{hover}//&*hover" if hover
-        puts "invalid operation. for available actions: rails g staple:list [option]" if !contents
+        puts "invalid operation: : #{component} import #{pattern}. for available actions: rails g staple:list [option]" if !contents
     end
 
     def remove
-        puts "remove"
+        puts "#{component} remove #{pattern}"
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{contents}", "" if contents
         gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n\t\t#{contents}", "" if contents
         gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{hover}", "" if hover
