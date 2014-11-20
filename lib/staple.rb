@@ -1,6 +1,3 @@
 require 'staple/buttons_generator'
-require 'staple/append_generator'
-require 'staple/remove_generator'
-require 'staple/amputate_generator'
 require 'staple/theme_generator'
 require 'staple/install_generator'
