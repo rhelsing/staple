@@ -33,11 +33,9 @@ module Staple
 
     def remove
         puts "remove"
-        # gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{contents}", "" if contents
-        # gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n\t\t#{contents}", "" if contents
-        # gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{hover}", "" if hover
-        # gsub_file "app/assets/stylesheets/staple/builders/build_#{component}.scss", "\n\t\t#{hover}", "" if hover
-        # puts "invalid operation. for available actions: rails g staple:list [option]" if !contents
+        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{contents}", "" if contents
+        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{focus}", "" if focus
+        gsub_file "app/assets/stylesheets/staple/#{component}.scss", "\n\t#{error}", "" if error
     end
 
     #HELPER METHODS
