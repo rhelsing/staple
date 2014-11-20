@@ -9,10 +9,6 @@ a modular ui framework for rails built on top of foundation and sass.
 * keep it simple
 
 ##todo
-
-* component based generators:
-	* tables
-	* sizes
 * refactor generator code from low priority
 * fix plastic (Focus color), flat theme selectors.
 
@@ -20,23 +16,22 @@ a modular ui framework for rails built on top of foundation and sass.
 * don't require other gems
 * integration with existing projects
 * reinstall places foundation again then does replace, separate generator for update?
-* variables generator:
+* create executables
+* Demarcate each pattern in scss (atom) with comment
+* add colors to accent, buttons? gen?
+* seperate if file contains into method.
+* check before import if already there (import font)
+* integrate:
+	* background, paragraph, etc vars
+	* append into generators
+	* generator for form colors from button list
+	* on sizes?:
 	* radius
 	* font
 	* primary-color
 	* border-size
 	* change amount (color dif, hover dif)
-* create executables
-* Demarcate each pattern in scss (atom) with comment
-* Make errors verbose. Print full command on low level.
-* make variable filename for generators
-* add colors to accent, buttons? gen?
-* seperate if file contains into method.
-* check before import if already there
-* integrate:
-	* background, paragraph, etc vars
-	* append into generators
-	* generator for form colors from button list
+* Reset method
 
 ##Install
 
