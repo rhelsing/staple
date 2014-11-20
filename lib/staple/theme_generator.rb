@@ -9,7 +9,7 @@ module Staple
     def call_generators
         if global?
             #call self with each
-            components = %w(buttons colors forms sizes tables typography)
+            components = %w(buttons colors forms tables typography)
             components.each do |c|
                 generate "staple:theme", "#{c}", "#{theme}"
             end
