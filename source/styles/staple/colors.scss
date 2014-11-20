@@ -1,7 +1,7 @@
 $primary-color: #3389dd;
 $complement-color: adjust_hue($primary-color, 180);
 $secondary-color: adjust_hue($primary-color, 135);
-$tertiary-color: adjust_hue($primary-color, 200);
+$tertiary-color: adjust_hue($primary-color, 200);//&*append
 
 //AUTO GENERATE FOUNDATION COLORS: (CAN OVERRIDE)
 @import 'helpers/color_functions';

@@ -23,16 +23,19 @@ module Staple
 
     def import
         puts "#{component} import #{variable} -> #{color}"
-        if File.readlines("app/assets/stylesheets/staple/#{component}.scss").any?{ |l| l["$#{variable}:"] }
-            puts "exists"
+        if File.readlines(filename).any?{ |l| l["$#{variable}:"] }
+            #replace line w/ new
+            gsub_file(filename, /\$#{variable}:.*$/, "$#{variable}: #{color}")
         else
-            puts "not in there"
+            #create variable w/color
+            gsub_file(filename, "//&*append", "\n$#{variable}: #{color};//&*append")
         end
         #check for variable, if yes: replace line, if no, create
     end
 
     def remove
         #check for variable, and remove line
+        gsub_file(filename, /\$#{variable}:.*$/, "")
     end
 
     #HELPER METHODS
@@ -48,6 +51,10 @@ module Staple
         else
             return false
         end
+    end
+
+    def filename
+        "app/assets/stylesheets/staple/#{component}.scss"
     end
 
     def not_valid

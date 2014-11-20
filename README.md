@@ -30,6 +30,7 @@ a modular ui framework for rails built on top of foundation and sass.
 * create executables
 * Demarcate each pattern in scss (atom) with comment
 * Make errors verbose. Print full command on low level.
+* make variable filename for generators
 
 ##Install
 
