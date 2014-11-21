@@ -1,10 +1,10 @@
 primary-color:#01B0F0
 complement-color:#FF358B
 secondary-color:#AEEE00
-tertiary-color:#000000
+tertiary-color:#f39c12
 white:#000
 black:#FFF
 topbar-bg-color:transparent
 topbar-text-color:'rgba($white, $transparent-strong)'
 body-bg:#333333
-body-font-color:'rgba($white, $transparent-medium)'
+body-font-color:'rgba($black, $transparent-medium)'
