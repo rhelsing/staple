@@ -3,13 +3,12 @@
 a modular ui framework for rails built on top of foundation and sass.
 
 ##goals
-
 * favor presets over explicit declaration
 * convention over configuration
 * keep it simple
 
 ##todo
-* integrate images and navs, etc?
+* integrate images and navs, etc? (as elements?)
 * import web components
 
 ##lower priority todo
@@ -54,8 +53,7 @@ rails g staple:install
 ```
 
 ##intended use
-
-* special cases - seperate generators?
+* *special cases - seperate generators?
 
 ###themes
 * rails g staple:theme buttons plastic
@@ -98,6 +96,6 @@ rails g staple:install
 * rails g staple:sizes amputate xxl
 
 #staple command - coming soon
-staple {button-style|button-theme} {pattern} (append)
-staple buttons round
-staple buttons-theme plastic
+* staple {button-style|button-theme} {pattern} (append)
+* staple buttons round
+* staple buttons-theme plastic
