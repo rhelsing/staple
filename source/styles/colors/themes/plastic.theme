@@ -1,8 +1,8 @@
-primary-color:#105B63;
-complement-color:#FFD34E;
-secondary-color:#DB9E36;
-tertiary-color:#BD4932;
-topbar-bg-color:transparent;
-topbar-text-color:rgba($black, $transparent-strong);
-body-bg:#FFFAD5;
-body-font-color:rgba($black, $transparent-medium);
+primary-color:#105B63
+complement-color:#FFD34E
+secondary-color:#DB9E36
+tertiary-color:#BD4932
+topbar-bg-color:transparent
+topbar-text-color:'rgba($black, $transparent-strong)'
+body-bg:#FFFAD5
+body-font-color:'rgba($black, $transparent-medium)'
