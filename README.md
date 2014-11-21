@@ -32,6 +32,7 @@ a modular ui framework for rails built on top of foundation and sass.
 	* border-size
 	* change amount (color dif, hover dif)
 * refactor generator code from low priority
+* add are you sure? to staple:reset
 
 ##Install
 
