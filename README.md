@@ -9,7 +9,7 @@ a modular ui framework for rails built on top of foundation and sass.
 * keep it simple
 
 ##todo
-* background color not working
+* integrate images and navs, etc?
 * import web components
 
 ##lower priority todo
