@@ -1,8 +1,8 @@
-primary-color:#01B0F0;
-complement-color:#FF358B;
-secondary-color:#AEEE00;
-tertiary-color:#000000;
+primary-color:#42826C;
+complement-color:#A5C77F;
+secondary-color:#FFC861;
+tertiary-color:#C84663;
 topbar-bg-color:transparent;
 topbar-text-color:rgba($white, $transparent-strong);
-body-bg:#333333;
+body-bg:#002F32;
 body-font-color:rgba($white, $transparent-medium);

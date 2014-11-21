@@ -33,6 +33,7 @@ a modular ui framework for rails built on top of foundation and sass.
 	* change amount (color dif, hover dif)
 * refactor generator code from low priority
 * add are you sure? to staple:reset
+* why does success (others too | nav button) button go darker?
 
 ##Install
 

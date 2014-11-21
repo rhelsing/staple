@@ -154,7 +154,7 @@ $shiny-edge-active-color: rgba($black, .2);
 $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 $header-font-style: normal;
-$header-font-color: rgba($black, $transparent-strong);
+$header-font-color: $body-font-color;
 $header-line-height: 1.4;
 $header-top-margin: .2rem;
 $header-bottom-margin: .5rem;
