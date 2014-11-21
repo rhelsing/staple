@@ -34,6 +34,7 @@ a modular ui framework for rails built on top of foundation and sass.
 * refactor generator code from low priority
 * add are you sure? to staple:reset
 * why does success (others too | nav button) button go darker?
+* white/black swap shouldn't affect buttons
 
 ##Install
 
