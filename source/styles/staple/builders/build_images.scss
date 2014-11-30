@@ -1,0 +1,9 @@
+@each $class in $background-image-classes {
+	$i: index($background-image-classes, $class);
+	$image: nth($background-image-define, $i);
+
+	.#{$class}{
+		background: url("#{$image}") no-repeat center center;//&*bg
+		background-size: cover;
+	}
+}

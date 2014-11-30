@@ -8,8 +8,10 @@ a modular ui framework for rails built on top of foundation and sass.
 * keep it simple
 
 ##todo
-* integrate images and navs, etc? (as elements?)
+* integrate navs, etc? (as elements?)
 * import web components
+* buttons causing scroll error on small screens?
+* ask before reset
 
 ##lower priority todo
 * don't require other gems
