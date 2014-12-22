@@ -1,0 +1,15 @@
+border-radius:3px;
+-webkit-box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.3), inset 0px 0px 3px 1px darken($primary-color, 2);
+-moz-box-shadow:    0px 1px 2px 0px rgba(50, 50, 50, 0.3), inset 0px 0px 3px 1px darken($primary-color, 2);
+box-shadow:         0px 1px 2px 0px rgba(50, 50, 50, 0.3), inset 0px 0px 3px 1px darken($primary-color, 2);
+background-color:$primary-color;
+border:1px solid darken($primary-color, 10);
+border-top: 2px solid lighten($primary-color, 2);
+border-bottom: 1px solid darken($primary-color, 4);
+text-shadow: 1px 1px  darken($primary-color, 5);
+color:#fff;
+font-weight: 600;
+font-size: 11px;
+letter-spacing: 1px;
+padding: 8px 30px 8px 30px;
+text-decoration:none;
