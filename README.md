@@ -8,6 +8,7 @@ a modular ui framework for rails built on top of foundation and sass.
 * keep it simple
 
 ##todo
+* integrate newest version of foundation
 * integrate navs, etc? (as elements?)
 * import web components
 * define custom themes and patterns per project
@@ -41,7 +42,7 @@ a modular ui framework for rails built on top of foundation and sass.
 ```ruby
 #Gemfile
 gem 'slim-rails'
-gem 'foundation-rails'
+gem 'foundation-rails', '5.4.5.0'
 gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'staple'
