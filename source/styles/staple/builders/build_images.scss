@@ -3,7 +3,9 @@
 	$image: nth($background-image-define, $i);
 
 	.#{$class}{
-		background: url("#{$image}") no-repeat center center;//&*bg
+		background: url("#{$image}") no-repeat;//&*bg
 		background-size: cover;
+    background-attachment:fixed;
+    background-position:center bottom;
 	}
 }
