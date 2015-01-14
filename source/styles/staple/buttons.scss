@@ -1,5 +1,6 @@
 //DEFAULT
-.button, input[type="submit"]{
+.button, input[type="submit"], button{
+  cursor: pointer;
 	background-color: $primary-color;
 	color: set-text-color($primary-color);
 	font-weight: 200;
@@ -8,7 +9,7 @@
   outline: none;
  	transition: background-color 150ms ease-out;//&*default
 }
-.button:hover{
+.button:hover, input[type="submit"]:hover, button:hover{
 	background-color: lighten($primary-color, $transition-brighten);//&*hover
 }//&*append
 
