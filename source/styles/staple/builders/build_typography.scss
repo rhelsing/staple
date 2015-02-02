@@ -33,3 +33,12 @@
 		letter-spacing: $spacing;
 	}
 }
+
+@each $class in $lheight-classes{
+	$i: index($lheight-classes, $class);
+	$lheight: nth($lheight-define, $i);
+
+	.#{$class}{
+		line-height: $lheight;
+	}
+}

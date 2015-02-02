@@ -12,12 +12,12 @@ a modular ui framework for rails built on top of foundation and sass.
 * integrate navs, etc? (as elements?)
 * import web components
 * define custom themes and patterns per project
+* create executables w/ help options
 
 ##lower priority todo
 * don't require other gems
 * integration with existing projects
 * reinstall places foundation again then does replace, separate generator for update?
-* create executables
 * Demarcate each pattern in scss (atom) with comment
 * add colors to accent, buttons? gen?
 * seperate if file contains into method.
@@ -33,7 +33,6 @@ a modular ui framework for rails built on top of foundation and sass.
 	* border-size
 	* change amount (color dif, hover dif)
 * refactor generator code from low priority
-* add are you sure? to staple:reset
 * why does success (others too | nav button) button go darker?
 * white/black swap shouldn't affect buttons
 

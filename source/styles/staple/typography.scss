@@ -32,6 +32,10 @@ $transform-define: uppercase lowercase capitalize;
 $spacing-classes: sleak wide;
 $spacing-define: 0.2rem 1rem;
 
+//line-height varients
+$lheight-classes: large xlarge;
+$lheight-define: 1.3rem 2rem;
+
 @import "builders/build_typography"
 
 //TODO: COOL FONT SHADOW EFFECT ON http://fittextjs.com

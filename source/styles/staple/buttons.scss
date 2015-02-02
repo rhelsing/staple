@@ -14,7 +14,7 @@
 }//&*append
 
 //BUTTON CLASSES TO GENERATE: (look in colors)
-$button-classes: 		primary 		compliment 			secondary 			tertiary;
+$button-classes: 		primary 		complement 			secondary 			tertiary;
 $button-define: 		$primary-color 	$complement-color	$secondary-color 	$tertiary-color;
 
 @import 'builders/build_buttons'

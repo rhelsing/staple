@@ -4,6 +4,11 @@
 	.#{$class}{
 		padding: $padding;
 	}
+	@media #{$small-range} {
+	  .#{$class}{
+			padding: 5px;
+		}
+	}
 }
 
 @each $class in $margin-classes{
@@ -11,6 +16,11 @@
 	$margin: nth($margin-define, $i);
 	.#{$class}{
 		margin: $margin;
+	}
+	@media #{$small-range} {
+	  .#{$class}{
+			margin: 5px;
+		}
 	}
 }
 
