@@ -8,6 +8,13 @@ a modular ui framework for rails built on top of foundation and sass.
 * keep it simple
 
 ##todo
+* simplify into foundation extension
+* dont require rails
+* standalone templates, sass, css files
+* my default configuration
+* drop in elements
+
+:OLD
 * integrate newest version of foundation
 * integrate navs, etc? (as elements?)
 * import web components
